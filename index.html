@@ -2,285 +2,327 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <title>Nitsavim 51-2: El Pacto para Generaciones Futuras</title>
+  <title>Ki Tavó: El Reino de Dios y el Reposo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Reveal.js CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/beige.css" id="theme">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css" id="theme">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* Forzar que la pantalla ocupe el 100% y evite el scroll vertical plano en móviles */
-    html, body {
-      width: 100%;
-      height: 100dvh; /* 100% de la altura de la ventana gráfica */
-      overflow: hidden;
-      margin: 0;
-      padding: 0;
-      background-color: #FAF7F2;
+    :root {
+      --gold: #d4af37;
+      --gold-light: #f3e5ab;
+      --bg-dark: #121212;
+      --card-bg: rgba(255, 255, 255, 0.05);
+      --card-border: rgba(212, 175, 55, 0.3);
     }
 
-    /* Estilos personalizados para la presentación- tipo de letra */
+    body {
+      background-color: var(--bg-dark);
+    }
+
     .reveal {
-      font-family: 'Plus Jakarta Sans', sans-serif;
-      color: #3D3A36;
-      width: 100%;
-      height: 100%;
+      font-family: 'Inter', sans-serif;
+      color: #e0e0e0;
     }
 
-    /*títulos y subtitulos - incluye una linea para h2*/
-    .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-      font-family: 'Marcellus', serif;
-      color: #3D3A36;
-      text-transform: none;
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: 'Cinzel', serif;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
 
-    .reveal h1 { font-size: 2.2em; color: #4A4E69; }
-    .reveal h2 { font-size: 1.6em; border-bottom: 2px solid #E2DACF; padding-bottom: 12px; margin-bottom: 20px; color: #4A4E69; }
-    
-    /*adornos para los subtitulos y badge una caja oscura sobre el título*/
-    .subtitle {
-      font-size: 0.95em;
-      color: #6E6A63;
-      margin-top: -10px;
-      margin-bottom: 25px;
-    }
+    .reveal h1 { font-size: 2.0em; text-shadow: 0 0 10px rgba(212,175,55,0.3); }
+    .reveal h2 { font-size: 1.8em; border-bottom: 1px solid var(--card-border); padding-bottom: 10px; }
+    .reveal h3 { font-size: 1.3em; color: var(--gold-light); }
 
-    .badge {
-      display: inline-block;
-      background: #E3D5CA;
-      color: #3D3A36;
+    .highlight {
+      color: var(--gold);
       font-weight: 600;
-      padding: 6px 16px;
-      border-radius: 20px;
-      font-size: 0.75em;
-      margin-bottom: 15px;
-      border: 1px solid #E2DACF;
     }
 
-    /*bloques y tarjetas flexiblescon fondo blanco y filo redondeado*/
+    .subtitle {
+      font-size: 1.1em;
+      color: #aaaaaa;
+      margin-top: -10px;
+      margin-bottom: 30px;
+    }
+
+    /* Target standard cards and container layouts */
     .card-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 18px;
-      margin-top: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      margin-top: 25px;
       text-align: left;
     }
 
     .card {
-      background: #FFFFFF;
-      border: 1px solid #E2DACF;
-      border-radius: 12px;
-      padding: 22px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-      font-size: 0.75em;
-      line-height: 1.6;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      font-size: 0.8em;
+      line-height: 1.5;
     }
 
-    /*caja de citas y viñetas personalizadas*/
+    .card h4 {
+      color: var(--gold);
+      margin-top: 0;
+      font-family: 'Cinzel', serif;
+      font-size: 1.1em;
+    }
+
     .quote-box {
-      background: #FFE5D9;
-      border-left: 5px solid #9A8C98;
-      padding: 20px 25px;
-      border-radius: 6px;
+      background: rgba(212, 175, 55, 0.08);
+      border-left: 4px solid var(--gold);
+      padding: 20px;
+      border-radius: 0 8px 8px 0;
       font-style: italic;
-      font-size: 0.85em;
+      font-size: 0.9em;
       text-align: left;
       margin: 20px 0;
-      line-height: 1.6;
+    }
+
+    .quote-box .citation {
+      text-align: right;
+      font-style: normal;
+      font-weight: bold;
+      color: var(--gold);
+      margin-top: 10px;
+      font-size: 0.85em;
     }
 
     ul.custom-list {
       list-style-type: none;
       padding-left: 0;
       text-align: left;
-      font-size: 0.8em;
+      font-size: 0.85em;
     }
 
     ul.custom-list li {
       position: relative;
-      padding-left: 28px;
-      margin-bottom: 14px;
-      line-height: 1.6;
+      padding-left: 30px;
+      margin-bottom: 15px;
+      line-height: 1.5;
     }
 
     ul.custom-list li::before {
-      content: "•";
+      content: "✦";
       position: absolute;
-      left: 8px;
-      color: #9A8C98;
-      font-size: 1.4em;
+      left: 0;
+      color: var(--gold);
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #000;
+      font-weight: bold;
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.75em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
+<div class="reveal">
+        <div class="slides">
 
-  <div class="reveal">
-    <div class="slides">
+            <!-- Diapositiva 1: Portada -->
+            <section>
+                <h1>Las Siete Congregaciones</h1>
+                <h3>Simbolismo, Revelación y Gobernanza Divina</h3>
+                <p><small>Basada en el análisis estructural de Apocalipsis y las siete iglesias</small></p>
+            </section>
 
-      <!-- Diapositiva 1: Principal / Tema -->
-<section>
-    <p class="badge">Estudio de Nitsavim (Deuteronomio 29:16-29)</p>
-    <h3>No Son del Mundo</h3>
-    <div class="quote-box">
-        "Porque vosotros sabéis cómo habitamos en la tierra de Egipto, y cómo hemos pasado por en medio de las naciones... y habéis visto sus abominaciones y sus ídolos..."
-        <span>- Deuteronomio 29:16-17</span>
+                        <!-- Diapositiva 2: Éfeso -->
+            <section>
+                <h2>Éfeso <span class="badge">01</span></h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>Cómo se presenta</h4>
+                        <ul>
+                            <li>Aquel que sostiene las siete estrellas en su diestra.</li>
+                            <li>Aquel que camina en medio de los siete candeleros de oro.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Lo que expresa</h4>
+                        <ul>
+                            <li>Soberanía absoluta y gobierno sobre la totalidad de las cosas.</li>
+                            <li>De Él procede tanto el bien como el mal.</li>
+                            <li>Su propósito y plan soberano se despliegan en el tiempo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 4: Esmirna -->
+            <section>
+                <h2>Esmirna <span class="badge">02</span></h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>Cómo se presenta</h4>
+                        <ul>
+                            <li>El primero y el último.</li>
+                            <li>Aquel que estuvo muerto y volvió a la vida.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Lo que expresa</h4>
+                        <ul>
+                            <li>Soberanía y dominio total sobre la vida eterna.</li>
+                            <li>Autoridad y poder supremo sobre la muerte.</li>
+                            <li>El Dios Eterno mantiene el control trascendente más allá de la vida terrenal.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 5: Pérgamo -->
+            <section>
+                <h2>Pérgamo <span class="badge">03</span></h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>Cómo se presenta</h4>
+                        <ul>
+                            <li>El poseedor de la espada aguda de dos filos.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Lo que expresa</h4>
+                        <ul>
+                            <li>Confirmación y validez de la Torá.</li>
+                            <li>Mandamientos con carácter irrevocable hasta el fin.</li>
+                            <li>Su palabra actúa como juez y ley soberana sobre el mundo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 6: Tiatira -->
+            <section>
+                <h2>Tiatira <span class="badge">04</span></h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>Cómo se presenta</h4>
+                        <ul>
+                            <li>El Hijo de Dios.</li>
+                            <li>Ojos semejantes a llama de fuego.</li>
+                            <li>Pies comparables al bronce bruñido.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Lo que expresa</h4>
+                        <ul>
+                            <li>Su caminar intachable y justo.</li>
+                            <li>Justicia divina, juicio estricto y rectitud inflexible.</li>
+                            <li>La condición del Hijo de Dios como un juez absolutamente justo.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 7: Sardis -->
+            <section>
+                <h2>Sardis <span class="badge">05</span></h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>Cómo se presenta</h4>
+                        <ul>
+                            <li>Poseedor de los siete espíritus de Dios.</li>
+                            <li>Poseedor de las siete estrellas.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Lo que expresa</h4>
+                        <ul>
+                            <li>Atributos de soberanía, poder, vigilancia y omnisciencia.</li>
+                            <li>Fuente única de la vida espiritual.</li>
+                            <li>El conocimiento absoluto de todas las cosas ("Lo sabe todo").</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 8: Filadelfia -->
+            <section>
+                <h2>Filadelfia <span class="badge">06</span></h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>Cómo se presenta</h4>
+                        <ul>
+                            <li>El Santo y el Verdadero.</li>
+                            <li>Poseedor de la llave de David.</li>
+                            <li>El que abre y nadie cierra, y cierra y nadie abre.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Lo que expresa</h4>
+                        <ul>
+                            <li>Rectitud absoluta y sin mancha.</li>
+                            <li>Responsabilidad e intachabilidad ante compromisos.</li>
+                            <li>Mayordomía eficaz y determinación de decisiones inmutables.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 9: Laodicea -->
+            <section>
+                <h2>Laodicea <span class="badge">07</span></h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <h4>Cómo se presenta</h4>
+                        <ul>
+                            <li>El Amén.</li>
+                            <li>El testigo fiel y verdadero.</li>
+                            <li>El principio de la creación de Dios.</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Lo que expresa</h4>
+                        <ul>
+                            <li>La Verdad trascendente más allá de este mundo terrenal.</li>
+                            <li>El reconocimiento de la obra divina realizada y establecida desde el principio.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 10: Resumen y Conclusión -->
+            <section>
+                <h2>Resumen Sintético</h2>
+                <p>Las presentaciones revelan atributos divinos específicos para cada congregación:</p>
+                <div class="grid-container" style="grid-template-columns: 1fr 1fr 1fr;">
+                    <div class="card" style="font-size: 0.7em;">
+                        <h4 style="font-size:1em;">Autoridad y Vida</h4>
+                        <p><strong>Éfeso y Esmirna:</strong> Gobierno universal, eternidad y poder absoluto sobre la muerte.</p>
+                    </div>
+                    <div class="card" style="font-size: 0.7em;">
+                        <h4 style="font-size:1em;">Justicia y Ley</h4>
+                        <p><strong>Pérgamo, Tiatira y Sardis:</strong> La validez de la Torá, juicio inflexible y omnisciencia.</p>
+                    </div>
+                    <div class="card" style="font-size: 0.7em;">
+                        <h4 style="font-size:1em;">Soberanía Absoluta</h4>
+                        <p><strong>Filadelfia y Laodicea:</strong> Inmutabilidad, verdad trascendente y mayordomía.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
     </div>
-</section>
-
-<!-- Diapositiva 2: Subtema I -->
-<section>
-    <p class="badge">I. La Gran Pregunta</p>
-    <div class="quote-box">
-        <h2>¿Cómo es posible vivir en el mundo sin ser del mundo?</h2>
-    </div>
-    <p>El creyente es colocado en medio de un entorno cultural y espiritual hostil, llamado a marcar una clara diferencia mientras habita en él.</p>
-</section>
-
-<!-- Diapositiva 3: Explicación detallada I -->
-<section data-background-transition="fade">
-    <p class="badge">El Espíritu y la carne</p>
-    <h3>El Espíritu del Mundo vs. El Espíritu de Dios</h3>
-    <ul>
-        <li><strong>El sistema actual:</strong> Existe un espíritu maligno que opera y rige sobre el sistema del mundo (1 Cor. 2:12).</li>
-        <li><strong>La seducción de placeres:</strong> Intenta seducir al hombre para buscar sus propios deleites desconectados del Padre.</li>
-        <li><strong>Enemistad con Dios:</strong> Amar el espíritu del mundo constituye una abierta enemistad contra Jehová.</li>
-    </ul>
-    <p style="margin-top: 30px;">"¡Oh almas adúlteras! ¿No sabéis que la amistad del mundo es enemistad hacia Dios?" (Santiago 4:4).</p>
-</section>
-
-<!-- Diapositiva 4: Subtema II -->
-<section>
-    <p class="badge">II. La Advertencia de Pablo</p>
-    <div class="quote-box">
-        <h2>No Améis al Mundo ni sus Deseos</h2>
-    </div>
-    <p>El amor al Padre y el amor al sistema mundano son mutuamente excluyentes en la vida del creyente.</p>
-</section>
-
-<!-- Diapositiva 5: Explicación detallada II -->
-<section data-background-transition="fade">
-    <p class="badge">No seas seducible</p>
-    <h3>Las Tres Facciones de la Seducción</h3>
-    <ul>
-        <li><strong>Pasión de la carne:</strong> Los deseos desordenados del cuerpo y los impulsos egoístas.</li>
-        <li><strong>Pasión de los ojos:</strong> El consumismo, la codicia y la fascinación por lo prohibido.</li>
-        <li><strong>Arrogancia de la vida:</strong> El orgullo, la autosuficiencia y la vanagloria (1 Juan 2:15-17).</li>
-    </ul>
-    <p style="margin-top: 30px;">El mundo y sus pasiones son pasajeros, pero el que hace la voluntad de Dios permanece para siempre.</p>
-</section>
-
-<!-- Diapositiva 6: Subtema III -->
-<section>
-    <p class="badge">III. La Experiencia en Egipto</p>
-    <div class="quote-box">
-        <h2>Resistir la Idolatría en el Cautiverio</h2>
-    </div>
-    <p>Los hijos de Israel habitaron siglos en Egipto rodeados de idolatría y cultos a espíritus malignos disfrazados de dioses.</p>
-</section>
-
-<!-- Diapositiva 7: Explicación detallada III -->
-<section data-background-transition="fade">
-    <p class="badge">Luchas diarias y decisión.</p>
-    <h3>Condiciones para la Verdadera Liberación</h3>
-    <ul>
-        <li><strong>Resistencia espiritual:</strong> No todos cedieron al entorno; un remanente mantuvo su devoción.</li>
-        <li><strong>Rechazo al sistema:</strong> Solo fueron librados quienes rehusaron someterse a la estructura de idolatría egipcia.</li>
-        <li><strong>Obediencia al llamado:</strong> La salida fue posible al obedecer las instrucciones divinas dadas mediante el profeta.</li>
-    </ul>
-    <p style="margin-top: 30px;">Aquellos que salieron lograron vivir en el mundo sin llegar a pertenecer al mundo.</p>
-</section>
-
-<!-- Diapositiva 8: Subtema IV -->
-<section>
-    <p class="badge">IV. El Paso por las Naciones</p>
-    <div class="quote-box">
-        <h2>Peligros en el Transitar del Desierto</h2>
-    </div>
-    <p>Al cruzar por diversas naciones, Israel contempló ídolos de madera, piedra, plata y oro, calificados por Dios como abominaciones.</p>
-</section>
-
-<!-- Diapositiva 9: Explicación detallada IV -->
-<section data-background-transition="fade">
-    <p class="badge">Mantente fiel al pacto.</p>
-    <h3>Consecuencias del Abandono del Pacto</h3>
-    <ul>
-        <li><strong>Advertencia severa:</strong> Fueron exhortados a no dejarse engañar para no quebrantar el pacto sagrado.</li>
-        <li><strong>Efecto de la desobediencia:</strong> Ceder al espíritu del mundo atrae juicio y maldición sobre el pueblo.</li>
-        <li><strong>Guerra e inestabilidad:</strong> Abandonar a Jehová en el corazón para ir tras lo terrenal desencadena conflictos y guerras.</li>
-    </ul>
-    <p style="margin-top: 30px;">El pueblo escogido es puesto en el mundo con un propósito, no para asimilarse a sus prácticas.</p>
-</section>
-
-<!-- Diapositiva 10: Subtema V -->
-<section>
-    <p class="badge">V. Los Portadores de la Antorcha</p>
-    <div class="quote-box">
-        <h2>Un Remanente que Prevalece</h2>
-    </div>
-    <p>A lo largo de la historia, quienes se arrepienten y dicen "no" al espíritu del mundo mantienen encendida la fe.</p>
-</section>
-
-<!-- Diapositiva 11: Explicación detallada V -->
-<section data-background-transition="fade">
-    <p class="badge">Al que venciere...</p>
-    <h3>La Promesa de la Purificación Final</h3>
-    <ul>
-        <li><strong>Arrepentimiento sincero:</strong> Volverse a Jehová es la única salvaguarda frente a la contaminación del entorno.</li>
-        <li><strong>Perseverancia de la fe:</strong> La antorcha de la verdad se transmite de generación en generación a través de los fieles.</li>
-        <li><strong>Promesa profética:</strong> Dios erradicará de la tierra los nombres de las imágenes y el espíritu de inmundicia (Zacarías 13:2).</li>
-    </ul>
-    <p style="margin-top: 30px;">Llegará el día en que la idolatría y los falsos profetas serán cortados definitivamente de la tierra.</p>
-</section>
-
-<!-- Diapositiva 12: Subtema VI -->
-<section>
-    <p class="badge">VI. La Intercesión de Yeshúa</p>
-    <div class="quote-box">
-        <h2>Guardados del Mal, No Quitados del Mundo</h2>
-    </div>
-    <p>Antes de partir, nuestro Maestro oró fervientemente al Padre por la protección espiritual de sus discípulos.</p>
-</section>
-
-<!-- Diapositiva 13: Explicación detallada VI -->
-<section data-background-transition="fade">
-    <p class="badge">Luz en medio de las tinieblas.</p>
-    <h3>La Oración Sacerdotal de Yeshúa</h3>
-    <ul>
-        <li><strong>Enviados al mundo:</strong> "No ruego que los quites del mundo, sino que los guardes del mal" (Juan 17:15).</li>
-        <li><strong>Identidad mesiánica:</strong> "No son del mundo, como tampoco yo soy del mundo" (Juan 17:16).</li>
-        <li><strong>Rechazo externo:</strong> El mundo los aborrece por haber recibido la Palabra de Dios y no ajustarse a su molde.</li>
-    </ul>
-    <p style="margin-top: 30px;">La Palabra nos capacita para mantenernos unificados en el nombre del Padre mientras cumplimos nuestra misión.</p>
-</section>
-
-<!-- Diapositiva 14: Subtema VII -->
-<section>
-    <p class="badge">VII. Ciudadanos del Reino Venidero</p>
-    <div class="quote-box">
-        <h2>Gobernar en el Mundo Venidero</h2>
-    </div>
-    <p>Aprender a vivir como verdaderos ciudadanos del Reino de Dios en la nación donde fuimos puestos determina nuestra posición futura.</p>
-</section>
-
-<!-- Diapositiva 15: Explicación detallada VII -->
-<section data-background-transition="fade">
-    <p class="badge">Yo conozco tus obras.</p>
-    <h3>Conclusión y Destino del Creyente</h3>
-    <ul>
-        <li><strong>Comprensión clara:</strong> Reconocer que nuestro reino no pertenece a este sistema terrenal.</li>
-        <li><strong>Conducta ejemplar:</strong> Ejercer nuestra ciudadanía celestial con responsabilidad en el presente.</li>
-        <li><strong>Recompensa eterna:</strong> Los que aprenden a no ser del mundo son los que gobernarán sobre el mundo venidero.</li>
-    </ul>
-    <p style="margin-top: 30px;">Mantengámonos firmes en el pacto, guardando nuestra fe limpia en medio de las naciones.</p>
-</section>
-    </div>
-  </div>
 
   <!-- Reveal.js Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
@@ -290,9 +332,7 @@
       progress: true,
       center: true,
       hash: true,
-      touch: true,          <!-- Fuerza la interacción táctil en móviles -->
-      loop: false,
-      transition: 'slide'   <!-- Transición fluida -->
+      transition: 'slide'
     });
   </script>
 </body>
