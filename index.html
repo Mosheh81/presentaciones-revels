@@ -1,339 +1,313 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <title>Resumen de las 7 iglesias</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Parashát Nitzavim - Deuteronomio 29:18-19</title>
 
-  <!-- Reveal.js CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css" id="theme">
+    <!-- Reveal.js CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/serif.min.css" id="theme">
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Fonts Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --gold: #d4af37;
-      --gold-light: #f3e5ab;
-      --bg-dark: #121212;
-      --card-bg: rgba(255, 255, 255, 0.05);
-      --card-border: rgba(212, 175, 55, 0.3);
-    }
+    <style>
+        :root {
+            --bg-color: #FDFBF7;
+            --text-color: #2D3748;
+            --accent-sage: #8A9A86;
+            --accent-terracotta: #D98A6C;
+            --accent-sand: #E2D4C9;
+            --card-bg: rgba(255, 255, 255, 0.75);
+            --card-border: #E0D7CD;
+        }
 
-    body {
-      background-color: var(--bg-dark);
-    }
+        body {
+            background-color: var(--bg-color);
+        }
 
-    .reveal {
-      font-family: 'Inter', sans-serif;
-      color: #e0e0e0;
-    }
+        .reveal {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-color);
+        }
 
-    .reveal h1, .reveal h2, .reveal h3 {
-      font-family: 'Cinzel', serif;
-      color: var(--gold);
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Marcellus', serif;
+            color: #1A202C;
+            text-transform: none;
+            letter-spacing: 0.02em;
+        }
 
-    .reveal h1 { font-size: 2.0em; text-shadow: 0 0 10px rgba(212,175,55,0.3); }
-    .reveal h2 { font-size: 1.8em; border-bottom: 1px solid var(--card-border); padding-bottom: 10px; }
-    .reveal h3 { font-size: 1.3em; color: var(--gold-light); }
+        .reveal h1 { font-size: 2.2em; color: var(--accent-terracotta); }
+        .reveal h2 { font-size: 1.6em; color: var(--accent-sage); border-bottom: 2px solid var(--accent-sand); padding-bottom: 10px; }
 
-    .highlight {
-      color: var(--gold);
-      font-weight: 600;
-    }
+        /* Tarjetas con Paleta Pastel */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            backdrop-filter: blur(5px);
+            margin-top: 15px;
+        }
 
-    .subtitle {
-      font-size: 1.1em;
-      color: #aaaaaa;
-      margin-top: -10px;
-      margin-bottom: 30px;
-    }
+        .quote-box {
+            background-color: #F4EFEA;
+            border-left: 5px solid var(--accent-terracotta);
+            padding: 20px;
+            border-radius: 8px;
+            font-style: italic;
+            text-align: left;
+            margin: 15px 0;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
 
-    /* Target standard cards and container layouts */
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-      margin-top: 25px;
-      text-align: left;
-    }
+        .hebrew-text {
+            font-family: 'Marcellus', serif;
+            color: var(--accent-terracotta);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
 
-    .card {
-      background: var(--card-bg);
-      border: 1px solid var(--card-border);
-      border-radius: 8px;
-      padding: 20px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-      font-size: 0.8em;
-      line-height: 1.5;
-    }
+        /* Gradación Visual */
+        .progression-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+        }
 
-    .card h4 {
-      color: var(--gold);
-      margin-top: 0;
-      font-family: 'Cinzel', serif;
-      font-size: 1.1em;
-    }
+        .progression-step {
+            background: #EBF1EA;
+            border: 1px solid #C8D6C5;
+            border-radius: 12px;
+            padding: 15px 20px;
+            width: 20%;
+            text-align: center;
+            font-weight: 600;
+        }
 
-    .quote-box {
-      background: rgba(212, 175, 55, 0.08);
-      border-left: 4px solid var(--gold);
-      padding: 20px;
-      border-radius: 0 8px 8px 0;
-      font-style: italic;
-      font-size: 0.9em;
-      text-align: left;
-      margin: 20px 0;
-    }
+        .arrow {
+            font-size: 1.5em;
+            color: var(--accent-terracotta);
+        }
 
-    .quote-box .citation {
-      text-align: right;
-      font-style: normal;
-      font-weight: bold;
-      color: var(--gold);
-      margin-top: 10px;
-      font-size: 0.85em;
-    }
+        /* Responsive Columns */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+        }
 
-    ul.custom-list {
-      list-style-type: none;
-      padding-left: 0;
-      text-align: left;
-      font-size: 0.85em;
-    }
+        .grid-3col {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            text-align: left;
+            font-size: 0.85em;
+        }
 
-    ul.custom-list li {
-      position: relative;
-      padding-left: 30px;
-      margin-bottom: 15px;
-      line-height: 1.5;
-    }
+        ul {
+            line-height: 1.6;
+        }
 
-    ul.custom-list li::before {
-      content: "✦";
-      position: absolute;
-      left: 0;
-      color: var(--gold);
-    }
+        li {
+            margin-bottom: 10px;
+        }
 
-    .badge {
-      display: inline-block;
-      background: var(--gold);
-      color: #000;
-      font-weight: bold;
-      padding: 3px 10px;
-      border-radius: 12px;
-      font-size: 0.75em;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-  </style>
+        .highlight {
+            color: var(--accent-terracotta);
+            font-weight: 600;
+        }
+
+        /* Footer / Subtítulo */
+        .subtitle {
+            font-size: 0.6em;
+            opacity: 0.7;
+            margin-top: 10px;
+        }
+    </style>
 </head>
 <body>
-<div class="reveal">
+
+    <div class="reveal">
         <div class="slides">
 
             <!-- Diapositiva 1: Portada -->
             <section>
-                <h1>Las Siete Congregaciones</h1>
-                <h3>Simbolismo, Revelación y Gobernanza Divina</h3>
-                <p><small>Basada en el análisis estructural de Apocalipsis y las siete iglesias</small></p>
+                <h1>Parashá Nitzavim</h1>
+                <h3>Deuteronomio 29:18-19</h3>
+                <p style="font-size: 0.9em; color: var(--accent-sage);">La raíz oculta, el autoengaño y la responsabilidad comunitaria</p>
+                <div class="card" style="margin-top: 40px;">
+                    <p style="font-size: 0.8em; margin: 0;">Un análisis exegético y espiritual desde la Torá hasta la profecía</p>
+                </div>
             </section>
 
-                        <!-- Diapositiva 2: Éfeso -->
+            <!-- Diapositiva 2: El Texto Sagrado -->
             <section>
-                <h2>Éfeso <span class="badge">01</span></h2>
-                <div class="grid-container">
+                <h2>El Texto: Deuteronomio 29:18-19</h2>
+                <div class="quote-box">
+                    <p><strong>Deu 29:18:</strong> No sea que haya entre vosotros varón o mujer, o familia o tribu, cuyo corazón se aparte hoy de Jehová nuestro Dios, para ir a servir a los dioses de esas naciones; no sea que haya en medio de vosotros raíz que produzca hiel y ajenjo..</p>
+                    <p><strong>Deu 29:19:</strong> ...y suceda que, al oír las palabras de esta maldición, él se bendiga en su corazón, diciendo: <em>"Tendré paz, aunque ande en la dureza de mi corazón"</em>, a fin de que con la embriaguez quite la sed</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 3: La Progresión del Alejamiento -->
+            <section>
+                <h2>La Progresión del Alejamiento</h2>
+                <p style="font-size: 0.85em;">El mal y la idolatría no nacen como movimientos masivos; inician de forma sutil e individual</p>
+                
+                <div class="progression-container">
+                    <div class="progression-step">Varón / Mujer<br><span style="font-size:0.7em; font-weight:normal;">Corazón individual</span></div>
+                    <div class="arrow">&rarr;</div>
+                    <div class="progression-step">Familia<br><span style="font-size:0.7em; font-weight:normal;">Enseñanza en el hogar</span></div>
+                    <div class="arrow">&rarr;</div>
+                    <div class="progression-step">Tribu<br><span style="font-size:0.7em; font-weight:normal;">Contagio social</span></div>
+                    <div class="arrow">&rarr;</div>
+                    <div class="progression-step" style="background:#FADED6; border-color:#E8B4A2;">Nación<br><span style="font-size:0.7em; font-weight:normal;">Apostasía colectiva</span></div>
+                </div>
+
+                <div class="card" style="margin-top: 30px; font-size: 0.8em;">
+                    <p>Así como los líderes guían al cumplimiento, la mala formación familiar puede hacer que servir a Dios sea visto como una carga pesada Si no se atiende, la actitud se propaga</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 4: La Raíz de Hiel y Ajenjo -->
+            <section>
+                <h2>La Raíz de Hiel y Ajenjo</h2>
+                <p class="hebrew-text">El deseo sutíl del mundo</p>
+                
+                <div class="grid-2col">
                     <div class="card">
-                        <h4>Cómo se presenta</h4>
-                        <ul>
-                            <li>Aquel que sostiene las siete estrellas en su diestra.</li>
-                            <li>Aquel que camina en medio de los siete candeleros de oro.</li>
+                        <h4 style="color: var(--accent-sage);">La Naturaleza de la Raíz</h4>
+                        <ul style="font-size: 0.8em;">
+                            <li><strong>Oculta bajo tierra:</strong> No es visible de inmediato.</li>
+                            <li><strong>Corrupción interna:</strong> Comienza como una actitud amarga o incrédula en el corazón</li>
+                            <li><strong>Efecto acumulativo:</strong> Da frutos venenosos que contaminan toda la comunidad</li>
                         </ul>
                     </div>
+
                     <div class="card">
-                        <h4>Lo que expresa</h4>
-                        <ul>
-                            <li>Soberanía absoluta y gobierno sobre la totalidad de las cosas.</li>
-                            <li>De Él procede tanto el bien como el mal.</li>
-                            <li>Su propósito y plan soberano se despliegan en el tiempo.</li>
+                        <h4 style="color: var(--accent-terracotta);">Las Botánicas de Veneno</h4>
+                        <ul style="font-size: 0.8em;">
+                            <li><strong>Hiel (Rosh):</strong> Amargura extrema, veneno lento.</li>
+                            <li><strong>Ajenjo (La'anah):</strong> Planta altamente amarga; símbolo de separación divina.</li>
+                            <li><strong>Resultado:</strong> El amor por lo externo en detrimiento del pacto.</li>
                         </ul>
                     </div>
                 </div>
             </section>
 
-            <!-- Diapositiva 4: Esmirna -->
+            <!-- Diapositiva 5: Psicología del Autoengaño -->
             <section>
-                <h2>Esmirna <span class="badge">02</span></h2>
-                <div class="grid-container">
+                <h2>La Autoengañosa Paz del Pecador</h2>
+                <p style="font-size: 0.85em;">Uno de los retratos psicológicos y espirituales más agudos de la Torá (v. 19)</p>
+
+                <div class="grid-2col">
                     <div class="card">
-                        <h4>Cómo se presenta</h4>
-                        <ul>
-                            <li>El primero y el último.</li>
-                            <li>Aquel que estuvo muerto y volvió a la vida.</li>
-                        </ul>
+                        <h4>El Diálogo Interno</h4>
+                        <p style="font-size: 0.8em;">Al escuchar la advertencia, la persona susurra: <span class="highlight">"A mí no me pasará nada, yo estaré bien"</span></p>
+                        <p style="font-size: 0.8em;">Se apoya en la terquedad de su propio corazón y apaga intencionalmente el Espíritu</p>
                     </div>
+
                     <div class="card">
-                        <h4>Lo que expresa</h4>
-                        <ul>
-                            <li>Soberanía y dominio total sobre la vida eterna.</li>
-                            <li>Autoridad y poder supremo sobre la muerte.</li>
-                            <li>El Dios Eterno mantiene el control trascendente más allá de la vida terrenal.</li>
-                        </ul>
+                        <h4>La Falsa Seguridad</h4>
+                        <p style="font-size: 0.8em;">Cree que puede vivir distante del pacto y aún así disfrutar de la bendición de Dios</p>
+                        <p style="font-size: 0.8em;">Es la trampa de buscar la paz sin cambiar la raíz.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Diapositiva 5: Pérgamo -->
+            <!-- Diapositiva 6: La Metáfora de la Embriaguez -->
             <section>
-                <h2>Pérgamo <span class="badge">03</span></h2>
-                <div class="grid-container">
-                    <div class="card">
-                        <h4>Cómo se presenta</h4>
-                        <ul>
-                            <li>El poseedor de la espada aguda de dos filos.</li>
-                        </ul>
+                <h2>«Quitar la Sed con Embriaguez»</h2>
+                <div class="card" style="margin-bottom: 20px;">
+                    <p style="font-size: 0.85em; font-style: italic;">"A fin de que con la embriaguez (lo saciado) quite la sed (lo sediento)"</p>
+                </div>
+
+                <div class="grid-2col">
+                    <div class="card" style="background: #FAF2ED;">
+                        <h4 style="color: var(--accent-terracotta);">Lo Sediento</h4>
+                        <p style="font-size: 0.8em;">Representa el deseo apasionado y descontrolado de pecar El pecador cree que cediendo al impulso, lo calmará.</p>
                     </div>
-                    <div class="card">
-                        <h4>Lo que expresa</h4>
-                        <ul>
-                            <li>Confirmación y validez de la Torá.</li>
-                            <li>Mandamientos con carácter irrevocable hasta el fin.</li>
-                            <li>Su palabra actúa como juez y ley soberana sobre el mundo.</li>
-                        </ul>
+
+                    <div class="card" style="background: #EBF1EA;">
+                        <h4 style="color: var(--accent-sage);">La Realidad Espiritual</h4>
+                        <p style="font-size: 0.8em;">Ceder al pecado <strong>no apaga el deseo, lo intensifica</strong>. Es equivalente a tomar agua de mar: arrastra lo que estaba en paz hacia la insaciabilidad.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Diapositiva 6: Tiatira -->
+            <!-- Diapositiva 7: El Simbolismo del Ajenjo en las Escrituras -->
             <section>
-                <h2>Tiatira <span class="badge">04</span></h2>
-                <div class="grid-container">
+                <h2>El Ajenjo a través de las Escrituras</h2>
+                <div class="grid-3col">
                     <div class="card">
-                        <h4>Cómo se presenta</h4>
-                        <ul>
-                            <li>El Hijo de Dios.</li>
-                            <li>Ojos semejantes a llama de fuego.</li>
-                            <li>Pies comparables al bronce bruñido.</li>
-                        </ul>
+                        <h4>1. Torá (Deuteronomio)</h4>
+                        <p><strong>Apostasía ética interna.</strong> Corrupción natural en el corazón, pecado silencioso y comodidad mundana.</p>
                     </div>
                     <div class="card">
-                        <h4>Lo que expresa</h4>
-                        <ul>
-                            <li>Su caminar intachable y justo.</li>
-                            <li>Justicia divina, juicio estricto y rectitud inflexible.</li>
-                            <li>La condición del Hijo de Dios como un juez absolutamente justo.</li>
-                        </ul>
+                        <h4>2. Profetas (Amós y Jeremías)</h4>
+                        <p><strong>Corrupción social y judicial.</strong> El sistema que debía traer justicia (agua fresca) se vuelve amargo como el ajenjo.</p>
+                    </div>
+                    <div class="card">
+                        <h4>3. Apocalipsis</h4>
+                        <p><strong>Juicio Escatológico Global.</strong> La amargura del corazón advertida, se manifiesta en desastre físico sobre toda la Tierra por la falta de juscticia.</p>
+                    </div>
+                </div>
+                <div class="subtitle" style="text-align: center; margin-top: 15px;">
+                    <em>La naturaleza del pecado no cambia; solo cambia su escala de manifestación por la falta de justicia.</em>
+                </div>
+            </section>
+
+            <!-- Diapositiva 8: Lecciones Prácticas -->
+            <section>
+                <h2>Principios para la Vida Práctica</h2>
+                
+                <div class="grid-2col">
+                    <div class="card">
+                        <h3 style="font-size: 1.1em; color: var(--accent-sage);">1. Responsabilidad Mutua</h3>
+                        <p style="font-size: 0.8em;">Nadie es una isla espiritual. Todos somos responsables los unos de los otros. Una pequeña raíz amarga ignorada pone en peligro la supervivencia de toda la comunidad.</p>
+                    </div>
+
+                    <div class="card">
+                        <h3 style="font-size: 1.1em; color: var(--accent-terracotta);">2. El Peligro de la Apatía</h3>
+                        <p style="font-size: 0.8em;">El mayor riesgo no es solo tropezar por debilidad, sino la <strong>arrogancia complaciente</strong>: escuchar la Torá y decir "a mí no me importa". Esa insensibilidad bloquea el retorno (Teshuvá).</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Diapositiva 7: Sardis -->
+            <!-- Diapositiva 9: Conclusión -->
             <section>
-                <h2>Sardis <span class="badge">05</span></h2>
-                <div class="grid-container">
-                    <div class="card">
-                        <h4>Cómo se presenta</h4>
-                        <ul>
-                            <li>Poseedor de los siete espíritus de Dios.</li>
-                            <li>Poseedor de las siete estrellas.</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4>Lo que expresa</h4>
-                        <ul>
-                            <li>Atributos de soberanía, poder, vigilancia y omnisciencia.</li>
-                            <li>Fuente única de la vida espiritual.</li>
-                            <li>El conocimiento absoluto de todas las cosas ("Lo sabe todo").</li>
-                        </ul>
-                    </div>
+                <h2>Conclusión para meditar</h2>
+                <div class="quote-box" style="text-align: center; border-left-color: var(--accent-sage);">
+                    <p style="font-size: 1.05em;">"El pecado más sutil no siempre se manifiesta en un altar de ídolos, sino en el diálogo interno que susurra: <br><em>'Puedo vivir así y aun así ser feliz. Buscaré la paz sin cambiar mi raíz'</em>".</p>
                 </div>
-            </section>
-
-            <!-- Diapositiva 8: Filadelfia -->
-            <section>
-                <h2>Filadelfia <span class="badge">06</span></h2>
-                <div class="grid-container">
-                    <div class="card">
-                        <h4>Cómo se presenta</h4>
-                        <ul>
-                            <li>El Santo y el Verdadero.</li>
-                            <li>Poseedor de la llave de David.</li>
-                            <li>El que abre y nadie cierra, y cierra y nadie abre.</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4>Lo que expresa</h4>
-                        <ul>
-                            <li>Rectitud absoluta y sin mancha.</li>
-                            <li>Responsabilidad e intachabilidad ante compromisos.</li>
-                            <li>Mayordomía eficaz y determinación de decisiones inmutables.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Diapositiva 9: Laodicea -->
-            <section>
-                <h2>Laodicea <span class="badge">07</span></h2>
-                <div class="grid-container">
-                    <div class="card">
-                        <h4>Cómo se presenta</h4>
-                        <ul>
-                            <li>El Amén.</li>
-                            <li>El testigo fiel y verdadero.</li>
-                            <li>El principio de la creación de Dios.</li>
-                        </ul>
-                    </div>
-                    <div class="card">
-                        <h4>Lo que expresa</h4>
-                        <ul>
-                            <li>La Verdad trascendente más allá de este mundo terrenal.</li>
-                            <li>El reconocimiento de la obra divina realizada y establecida desde el principio.</li>
-                        </ul>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Diapositiva 10: Resumen y Conclusión -->
-            <section>
-                <h2>Resumen Sintético</h2>
-                <p>Las presentaciones revelan atributos divinos específicos para cada congregación:</p>
-                <div class="grid-container" style="grid-template-columns: 1fr 1fr 1fr;">
-                    <div class="card" style="font-size: 0.7em;">
-                        <h4 style="font-size:1em;">Autoridad y Vida</h4>
-                        <p><strong>Éfeso y Esmirna:</strong> Gobierno universal, eternidad y poder absoluto sobre la muerte.</p>
-                    </div>
-                    <div class="card" style="font-size: 0.7em;">
-                        <h4 style="font-size:1em;">Justicia y Ley</h4>
-                        <p><strong>Pérgamo, Tiatira y Sardis:</strong> La validez de la Torá, juicio inflexible y omnisciencia.</p>
-                    </div>
-                    <div class="card" style="font-size: 0.7em;">
-                        <h4 style="font-size:1em;">Soberanía Absoluta</h4>
-                        <p><strong>Filadelfia y Laodicea:</strong> Inmutabilidad, verdad trascendente y mayordomía.</p>
-                    </div>
+                <div class="card" style="margin-top: 20px;">
+                    <p style="font-size: 0.85em; margin: 0;">Mantengamos la pureza de la relación con nuestro Creador diariamente, arrancando las raíces ocultas antes de que den su amargo fruto por la falta de juscticia.</p>
                 </div>
             </section>
 
         </div>
     </div>
 
-  <!-- Reveal.js Scripts -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
-  <script>
-    Reveal.initialize({
-      controls: true,
-      progress: true,
-      center: true,
-      hash: true,
-      transition: 'slide'
-    });
-  </script>
+    <!-- Reveal.js JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            controls: true,
+            progress: true,
+            center: true,
+            hash: true,
+            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            backgroundTransition: 'fade'
+        });
+    </script>
 </body>
 </html>
