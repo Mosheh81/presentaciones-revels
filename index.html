@@ -3,134 +3,159 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Parashát Nitzavim - Deuteronomio 29:18-19</title>
+
+    <title>La Visión del Cordero ante el Trono</title>
 
     <!-- Reveal.js CSS CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/serif.min.css" id="theme">
-
-    <!-- Fonts Google -->
+    
+    <!-- Fuentes Google Fonts: Inter y Cinzel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
+        /* Paleta de Colores y Estilo Oscuro Coherente */
         :root {
-            --bg-color: #FDFBF7;
-            --text-color: #2D3748;
-            --accent-sage: #8A9A86;
-            --accent-terracotta: #D98A6C;
-            --accent-sand: #E2D4C9;
-            --card-bg: rgba(255, 255, 255, 0.75);
-            --card-border: #E0D7CD;
+            --bg-dark: #121212;
+            --text-light: #e0e0e0;
+            --gold: #d4af37;
+            --gold-light: #f3e5ab;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(212, 175, 55, 0.3);
         }
 
         body {
-            background-color: var(--bg-color);
+            background-color: var(--bg-dark);
+            font-family: 'Inter', sans-serif;
+            color: var(--text-light);
         }
 
-        .reveal {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--text-color);
+        /* Fondo general oscuro con gradiente sutil para la presentación */
+        .reveal-viewport {
+            background: radial-gradient(circle at center, #1e1e1e 0%, #121212 100%) !important;
         }
 
         .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-            font-family: 'Marcellus', serif;
-            color: #1A202C;
-            text-transform: none;
-            letter-spacing: 0.02em;
+            font-family: 'Cinzel', serif !important;
+            color: var(--gold) !important;
+            text-transform: uppercase !important;
+            letter-spacing: 1px;
         }
 
-        .reveal h1 { font-size: 2.2em; color: var(--accent-terracotta); }
-        .reveal h2 { font-size: 1.6em; color: var(--accent-sage); border-bottom: 2px solid var(--accent-sand); padding-bottom: 10px; }
+        .reveal h1 { font-size: 2.8em; text-shadow: 0 0 10px rgba(212,175,55,0.3); }
+        .reveal h2 { 
+            font-size: 2.3em; 
+            border-bottom: 1px solid var(--card-border); 
+            padding-bottom: 8px; 
+            margin-bottom: 18px; 
+        }
 
-        /* Tarjetas con Paleta Pastel */
-        .card {
+        /* Tarjetas de Contenido */
+        .content-card {
             background: var(--card-bg);
             border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-            backdrop-filter: blur(5px);
-            margin-top: 15px;
-        }
-
-        .quote-box {
-            background-color: #F4EFEA;
-            border-left: 5px solid var(--accent-terracotta);
-            padding: 20px;
-            border-radius: 8px;
-            font-style: italic;
-            text-align: left;
-            margin: 15px 0;
-            font-size: 0.9em;
-            line-height: 1.5;
-        }
-
-        .hebrew-text {
-            font-family: 'Marcellus', serif;
-            color: var(--accent-terracotta);
-            font-weight: bold;
-            font-size: 1.1em;
-        }
-
-        /* Gradación Visual */
-        .progression-container {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin-top: 30px;
-        }
-
-        .progression-step {
-            background: #EBF1EA;
-            border: 1px solid #C8D6C5;
             border-radius: 12px;
-            padding: 15px 20px;
-            width: 20%;
-            text-align: center;
+            padding: 30px;
+            box-shadow: 0 4px 25px rgba(0,0,0,0.6);
+            text-align: left;
+            margin: 0 auto;
+            max-width: 900px;
+        }
+
+        /* Tamaño de fuente reducido idéntico al estilo oscuro (0.8em / 0.85em) */
+        .reveal p, .reveal li {
+            font-size: 1.4em;
+            line-height: 1.5;
+            color: var(--text-light);
+        }
+
+        .reveal ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        .reveal ul li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+        }
+
+        .reveal ul li::before {
+            content: "—";
+            color: var(--gold);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            top: 0px;
+        }
+
+        /* Versículos y Destacados */
+        .bible-verse {
+            background: rgba(212, 175, 55, 0.08);
+            border-left: 4px solid var(--gold);
+            padding: 15px 18px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+            color: var(--gold-light);
+            margin-bottom: 18px;
+            font-size: 1.0em;
+        }
+
+        .scripture-ref {
+            font-size: 1.0em;
             font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+            margin-bottom: 6px;
         }
 
-        .arrow {
-            font-size: 1.5em;
-            color: var(--accent-terracotta);
-        }
-
-        /* Responsive Columns */
-        .grid-2col {
+        /* Grid layout para diapositivas comparativas */
+        .grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 20px;
-            text-align: left;
         }
 
-        .grid-3col {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 15px;
-            text-align: left;
-            font-size: 0.85em;
+        .grid-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 18px;
+            border: 1px solid var(--card-border);
         }
 
-        ul {
-            line-height: 1.6;
+        /* Pregunta Reflexiva */
+        .reflection-box {
+            background: rgba(212, 175, 55, 0.08);
+            border: 1px dashed var(--gold);
+            border-radius: 8px;
+            padding: 18px;
+            text-align: center;
+            margin-top: 18px;
         }
 
-        li {
-            margin-bottom: 10px;
+        /* Logo Fijo en la marca de agua (Footer) */
+        #persistent-logo {
+            position: fixed;
+            bottom: 24px;
+            right: 32px;
+            width: 45px;
+            height: 45px;
+            z-index: 99;
+            opacity: 0.55;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            filter: drop-shadow(0 0 5px rgba(212,175,55,0.3));
         }
 
-        .highlight {
-            color: var(--accent-terracotta);
-            font-weight: 600;
-        }
-
-        /* Footer / Subtítulo */
-        .subtitle {
-            font-size: 0.6em;
-            opacity: 0.7;
-            margin-top: 10px;
+        #persistent-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
     </style>
 </head>
@@ -139,162 +164,152 @@
     <div class="reveal">
         <div class="slides">
 
-            <!-- Diapositiva 1: Portada -->
+            <!-- DIAPOSITIVA 1: Portada -->
             <section>
-                <h1>Parashá Nitzavim</h1>
-                <h3>Deuteronomio 29:18-19</h3>
-                <p style="font-size: 0.9em; color: var(--accent-sage);">La raíz oculta, el autoengaño y la responsabilidad comunitaria</p>
-                <div class="card" style="margin-top: 40px;">
-                    <p style="font-size: 0.8em; margin: 0;">Un análisis exegético y espiritual desde la Torá hasta la profecía</p>
+                <div class="content-card" style="text-align: center;">
+                    <span class="scripture-ref">Apocalipsis 5:5</span>
+                    <h1>La Visión del Cordero<br><span style="color: var(--gold-light);">ante el Trono</span></h1>
+                    <div style="width: 50px; height: 2px; background: var(--gold); margin: 20px auto;"></div>
+                    <p style="text-align: center; font-size: 0.85em; color: #aaa;">
+                        Delante del trono de Dios aparece el título de propiedad de la tierra.
+                    </p>
                 </div>
             </section>
 
-            <!-- Diapositiva 2: El Texto Sagrado -->
+            <!-- DIAPOSITIVA 2: La Preocupación de Juan -->
             <section>
-                <h2>El Texto: Deuteronomio 29:18-19</h2>
-                <div class="quote-box">
-                    <p><strong>Deu 29:18:</strong> No sea que haya entre vosotros varón o mujer, o familia o tribu, cuyo corazón se aparte hoy de Jehová nuestro Dios, para ir a servir a los dioses de esas naciones; no sea que haya en medio de vosotros raíz que produzca hiel y ajenjo..</p>
-                    <p><strong>Deu 29:19:</strong> ...y suceda que, al oír las palabras de esta maldición, él se bendiga en su corazón, diciendo: <em>"Tendré paz, aunque ande en la dureza de mi corazón"</em>, a fin de que con la embriaguez quite la sed</p>
-                </div>
-            </section>
-
-            <!-- Diapositiva 3: La Progresión del Alejamiento -->
-            <section>
-                <h2>La Progresión del Alejamiento</h2>
-                <p style="font-size: 0.85em;">El mal y la idolatría no nacen como movimientos masivos; inician de forma sutil e individual</p>
-                
-                <div class="progression-container">
-                    <div class="progression-step">Varón / Mujer<br><span style="font-size:0.7em; font-weight:normal;">Corazón individual</span></div>
-                    <div class="arrow">&rarr;</div>
-                    <div class="progression-step">Familia<br><span style="font-size:0.7em; font-weight:normal;">Enseñanza en el hogar</span></div>
-                    <div class="arrow">&rarr;</div>
-                    <div class="progression-step">Tribu<br><span style="font-size:0.7em; font-weight:normal;">Contagio social</span></div>
-                    <div class="arrow">&rarr;</div>
-                    <div class="progression-step" style="background:#FADED6; border-color:#E8B4A2;">Nación<br><span style="font-size:0.7em; font-weight:normal;">Apostasía colectiva</span></div>
-                </div>
-
-                <div class="card" style="margin-top: 30px; font-size: 0.8em;">
-                    <p>Así como los líderes guían al cumplimiento, la mala formación familiar puede hacer que servir a Dios sea visto como una carga pesada Si no se atiende, la actitud se propaga</p>
-                </div>
-            </section>
-
-            <!-- Diapositiva 4: La Raíz de Hiel y Ajenjo -->
-            <section>
-                <h2>La Raíz de Hiel y Ajenjo</h2>
-                <p class="hebrew-text">El deseo sutíl del mundo</p>
-                
-                <div class="grid-2col">
-                    <div class="card">
-                        <h4 style="color: var(--accent-sage);">La Naturaleza de la Raíz</h4>
-                        <ul style="font-size: 0.8em;">
-                            <li><strong>Oculta bajo tierra:</strong> No es visible de inmediato.</li>
-                            <li><strong>Corrupción interna:</strong> Comienza como una actitud amarga o incrédula en el corazón</li>
-                            <li><strong>Efecto acumulativo:</strong> Da frutos venenosos que contaminan toda la comunidad</li>
-                        </ul>
+                <div class="content-card">
+                    <h2>I. La Preocupación de Juan</h2>
+                    <div class="bible-verse">
+                        "Y uno de los ancianos me dijo: No llores. He aquí que el León de la tribu de Judá, la raíz de David, ha vencido para abrir el libro y desatar sus siete sellos." <br>— Apocalipsis 5:5
                     </div>
+                    <ul>
+                        <li><strong>Incertidumbre:</strong> ¿Quién lo tomará?</li>
+                        <li><strong>Destino:</strong> ¿Cuál será el destino que nos espera?</li>
+                        <li><strong>Consuelo:</strong> Hay alguien que ha vencido y es digno de abrir el libro.</li>
+                    </ul>
+                </div>
+            </section>
 
-                    <div class="card">
-                        <h4 style="color: var(--accent-terracotta);">Las Botánicas de Veneno</h4>
-                        <ul style="font-size: 0.8em;">
-                            <li><strong>Hiel (Rosh):</strong> Amargura extrema, veneno lento.</li>
-                            <li><strong>Ajenjo (La'anah):</strong> Planta altamente amarga; símbolo de separación divina.</li>
-                            <li><strong>Resultado:</strong> El amor por lo externo en detrimiento del pacto.</li>
-                        </ul>
+            <!-- DIAPOSITIVA 3: La Revelación del Mesías -->
+            <section>
+                <div class="content-card">
+                    <h2>II. La Revelación del Mesías</h2>
+                    <p>El ángel muestra en sus palabras la imagen del Mesías esperado:</p>
+                    <ul>
+                        <li><strong>El León de la tribu de Judá:</strong> La raíz de David.</li>
+                        <li><strong>El Rey Prometido:</strong> La profecía del rey victorioso descrita en Jeremías 23:5.</li>
+                    </ul>
+                    <div class="reflection-box">
+                        <p style="margin: 0; font-weight: 600; color: var(--gold-light);">
+                            La expectativa del pueblo apuntaba a la llegada de una figura majestuosa y poderosa.
+                        </p>
                     </div>
                 </div>
             </section>
 
-            <!-- Diapositiva 5: Psicología del Autoengaño -->
+            <!-- DIAPOSITIVA 4: El Cordero Inmolado -->
             <section>
-                <h2>La Autoengañosa Paz del Pecador</h2>
-                <p style="font-size: 0.85em;">Uno de los retratos psicológicos y espirituales más agudos de la Torá (v. 19)</p>
+                <div class="content-card">
+                    <h2>III. La Apariencia del Cordero</h2>
+                    <p>Cuando Juan mira, ve un <strong>Cordero como inmolado</strong>:</p>
+                    <ul>
+                        <li>No tiene la imagen poderosa e imponente que habitualmente se espera de un rey.</li>
+                        <li>Lleva consigo las marcas de haber sido sacrificado.</li>
+                        <li><strong>Dignidad Suprema:</strong> Es precisamente este Cordero quien es digno de tomar la tierra.</li>
+                    </ul>
+                </div>
+            </section>
 
-                <div class="grid-2col">
-                    <div class="card">
-                        <h4>El Diálogo Interno</h4>
-                        <p style="font-size: 0.8em;">Al escuchar la advertencia, la persona susurra: <span class="highlight">"A mí no me pasará nada, yo estaré bien"</span></p>
-                        <p style="font-size: 0.8em;">Se apoya en la terquedad de su propio corazón y apaga intencionalmente el Espíritu</p>
-                    </div>
-
-                    <div class="card">
-                        <h4>La Falsa Seguridad</h4>
-                        <p style="font-size: 0.8em;">Cree que puede vivir distante del pacto y aún así disfrutar de la bendición de Dios</p>
-                        <p style="font-size: 0.8em;">Es la trampa de buscar la paz sin cambiar la raíz.</p>
+            <!-- DIAPOSITIVA 5: La Paradoja de los Tiempos -->
+            <section>
+                <div class="content-card">
+                    <h2>IV. La Paradoja Mesiánica</h2>
+                    <p>Igual que el pueblo de Israel en su primera venida esperaba la imponencia de su gran Mesías, hoy muchos continúan esperando únicamente al León.</p>
+                    <div class="grid-2" style="margin-top: 15px;">
+                        <div class="grid-card">
+                            <span class="scripture-ref">Juicio</span>
+                            <p style="margin:0;"><strong>El Cordero</strong> es quien desata los juicios de los sellos sobre la tierra.</p>
+                        </div>
+                        <div class="grid-card">
+                            <span class="scripture-ref">Reinado (Apo 17:14)</span>
+                            <p style="margin:0;"><strong>El Cordero</strong> es quien se sentará a reinar para siempre.</p>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Diapositiva 6: La Metáfora de la Embriaguez -->
+            <!-- DIAPOSITIVA 6: El Primer Aspecto del Ungido -->
             <section>
-                <h2>«Quitar la Sed con Embriaguez»</h2>
-                <div class="card" style="margin-bottom: 20px;">
-                    <p style="font-size: 0.85em; font-style: italic;">"A fin de que con la embriaguez (lo saciado) quite la sed (lo sediento)"</p>
-                </div>
-
-                <div class="grid-2col">
-                    <div class="card" style="background: #FAF2ED;">
-                        <h4 style="color: var(--accent-terracotta);">Lo Sediento</h4>
-                        <p style="font-size: 0.8em;">Representa el deseo apasionado y descontrolado de pecar El pecador cree que cediendo al impulso, lo calmará.</p>
-                    </div>
-
-                    <div class="card" style="background: #EBF1EA;">
-                        <h4 style="color: var(--accent-sage);">La Realidad Espiritual</h4>
-                        <p style="font-size: 0.8em;">Ceder al pecado <strong>no apaga el deseo, lo intensifica</strong>. Es equivalente a tomar agua de mar: arrastra lo que estaba en paz hacia la insaciabilidad.</p>
-                    </div>
+                <div class="content-card">
+                    <h2>V. El Sacerdocio en la Torá</h2>
+                    <ul>
+                        <li><strong>La Primera Figura:</strong> La imagen del ungido que primero se nos muestra en la Torá no es la de un rey gobernante (Éxodo 28:41; 29:7).</li>
+                        <li><strong>El Sumo Sacerdote:</strong> Entra una vez al año para expiar los pecados del pueblo (Levítico 16:32).</li>
+                        <li><strong>El Orden Divino:</strong> El Mesías, el ungido, en primer lugar hace referencia a su labor sacerdotal.</li>
+                    </ul>
                 </div>
             </section>
 
-            <!-- Diapositiva 7: El Simbolismo del Ajenjo en las Escrituras -->
+            <!-- DIAPOSITIVA 7: El Mesías Rey -->
             <section>
-                <h2>El Ajenjo a través de las Escrituras</h2>
-                <div class="grid-3col">
-                    <div class="card">
-                        <h4>1. Torá (Deuteronomio)</h4>
-                        <p><strong>Apostasía ética interna.</strong> Corrupción natural en el corazón, pecado silencioso y comodidad mundana.</p>
-                    </div>
-                    <div class="card">
-                        <h4>2. Profetas (Amós y Jeremías)</h4>
-                        <p><strong>Corrupción social y judicial.</strong> El sistema que debía traer justicia (agua fresca) se vuelve amargo como el ajenjo.</p>
-                    </div>
-                    <div class="card">
-                        <h4>3. Apocalipsis</h4>
-                        <p><strong>Juicio Escatológico Global.</strong> La amargura del corazón advertida, se manifiesta en desastre físico sobre toda la Tierra por la falta de justicia.</p>
-                    </div>
-                </div>
-                <div class="subtitle" style="text-align: center; margin-top: 15px;">
-                    <em>La naturaleza del pecado no cambia; solo cambia su escala de manifestación por la falta de justicia.</em>
+                <div class="content-card">
+                    <h2>VI. El Mesías Rey</h2>
+                    <ul>
+                        <li><strong>Aparición Histórica:</strong> Varios años después, cuando Israel pidió rey, aparece la figura mesiánica que apunta al descendiente de Judá que reinará por siempre.</li>
+                        <li><strong>Testimonio del Salterio:</strong> Los salmos mesiánicos apuntan a esta figura que surge después de la revelación del sacerdote (Salmo 2:2, 6-8).</li>
+                    </ul>
                 </div>
             </section>
 
-            <!-- Diapositiva 8: Lecciones Prácticas -->
+            <!-- DIAPOSITIVA 8: Primero la Obra Redentora -->
             <section>
-                <h2>Principios para la Vida Práctica</h2>
-                
-                <div class="grid-2col">
-                    <div class="card">
-                        <h3 style="font-size: 1.1em; color: var(--accent-sage);">1. Responsabilidad Mutua</h3>
-                        <p style="font-size: 0.8em;">Nadie es una isla espiritual. Todos somos responsables los unos de los otros. Una pequeña raíz amarga ignorada pone en peligro la supervivencia de toda la comunidad.</p>
-                    </div>
-
-                    <div class="card">
-                        <h3 style="font-size: 1.1em; color: var(--accent-terracotta);">2. El Peligro de la Apatía</h3>
-                        <p style="font-size: 0.8em;">El mayor riesgo no es solo tropezar por debilidad, sino la <strong>arrogancia complaciente</strong>: escuchar la Torá y decir "a mí no me importa". Esa insensibilidad bloquea el retorno (Teshuvá).</p>
-                    </div>
+                <div class="content-card">
+                    <h2>VII. Primero la Obra Redentora</h2>
+                    <ul>
+                        <li>La obra redentora del Cordero inmolado es lo que lo hace digno de sentarse en el trono.</li>
+                        <li>El Cordero que fue inmolado es quien será manifestado como el León de la tribu de Judá (Apocalipsis 5:9).</li>
+                    </ul>
                 </div>
             </section>
 
-            <!-- Diapositiva 9: Conclusión -->
+            <!-- DIAPOSITIVA 9: La Obra en Marcha Hoy -->
             <section>
-                <h2>Conclusión para meditar</h2>
-                <div class="quote-box" style="text-align: center; border-left-color: var(--accent-sage);">
-                    <p style="font-size: 1.05em;">"El pecado más sutil no siempre se manifiesta en un altar de ídolos, sino en el diálogo interno que susurra: <br><em>'Puedo vivir así y aun así ser feliz. Buscaré la paz sin cambiar mi raíz'</em>".</p>
+                <div class="content-card">
+                    <h2>VIII. La Obra Redentora Hoy</h2>
+                    <ul>
+                        <li>Cuando Yeshúa regrese, no vendrá a buscar a quienes apenas quieran empezar a ser parte de su pueblo.</li>
+                        <li>La obra redentora está en marcha hoy; busca a quienes abrazen su reino.</li>
+                        <li><strong>Mensaje a la Iglesia:</strong> <em>"Conozco tus obras... Al que venciere..."</em></li>
+                        <li>Su pueblo debe ser purificado y santificado hoy, mientras la obra está activa.</li>
+                        <li>En su retorno, el reino ya estará establecido entre quienes siguieron sus caminos (Daniel 2:44).</li>
+                    </ul>
                 </div>
-                <div class="card" style="margin-top: 20px;">
-                    <p style="font-size: 0.85em; margin: 0;">Mantengamos la pureza de la relación con nuestro Creador diariamente, arrancando las raíces ocultas antes de que den su amargo fruto por la falta de juscticia.</p>
+            </section>
+
+            <!-- DIAPOSITIVA 10: Llamado a la Preparación -->
+            <section>
+                <div class="content-card">
+                    <h2>IX. Preparación en el Tiempo Presente</h2>
+                    <ul>
+                        <li>Cuando lleguen los eventos del fin, no habrá tiempo para comenzar a buscar a Dios con seriedad.</li>
+                        <li>El tiempo de gracia y su obra redentora están disponibles hoy.</li>
+                        <li>Al comenzar los eventos, el Cordero identificará claramente a su pueblo (El Israel de Dios / Lucas 17:21).</li>
+                    </ul>
+                    <div class="reflection-box">
+                        <p style="margin:0; font-size: 0.9em; font-weight: 600; color: var(--gold);">
+                            ¿Eres tú parte de ese pueblo?
+                        </p>
+                    </div>
                 </div>
             </section>
 
         </div>
+    </div>
+
+    <!-- Logo no invasivo en la esquina inferior -->
+    <div id="persistent-logo">
+        <img src="BIBLIA-CONTEXTO-avatar.png" alt="Logo Biblia & Contexto">
     </div>
 
     <!-- Reveal.js JS CDN -->
@@ -303,10 +318,16 @@
         Reveal.initialize({
             controls: true,
             progress: true,
-            center: true,
+            center: true, // Cambiar a false para que el contenido fluya desde arriba en móvil
             hash: true,
-            transition: 'slide', // none/fade/slide/convex/concave/zoom
-            backgroundTransition: 'fade'
+            transition: 'fade',
+            backgroundTransition: 'fade',
+            // Añade estas propiedades para control de escala vertical/móvil:
+            width: 480,   // Ancho base estrecho (ej. proporción móvil)
+            height: 854,  // Alto base alargado (proporción 9:16)
+            margin: 0.05,
+            minScale: 0.2,
+            maxScale: 2.0
         });
     </script>
 </body>
