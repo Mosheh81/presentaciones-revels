@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Prevenir almacenamiento en caché (Cache-Control Tags) -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>Los dos ladrones - Presentación Móvil</title>
+
+    <!-- Reveal.js CDN CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    
+    <!-- Estilos personalizados: Paleta de tonos cálidos y pasteles + Desenfoque CSS -->
+    <style>
+        :root {
+            --bg-color: #FAF4EE;           /* Crema pastel cálido */
+            --card-bg: #FFFDF9;            /* Blanco cálido para tarjetas */
+            --text-main: #4A3E3D;          /* Marrón oscuro suave */
+            --accent-warm: #E07A5F;        /* Terracota pastel / Coral cálido */
+            --accent-soft: #F4F1DE;        /* Hueso claro */
+            --border-accent: #E8D5C4;      /* Borde suave melocotón */
+        }
+
+        body {
+            background-color: var(--bg-color);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
+        }
+
+        .reveal {
+            font-size: 24px;
+        }
+
+        .reveal .slides {
+            text-align: center;
+        }
+
+        /* Estructura optimizada para vista vertical/móvil */
+        .slide-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border-accent);
+            border-radius: 20px;
+            padding: 25px 20px;
+            box-shadow: 0 10px 25px rgba(180, 140, 120, 0.12);
+            margin: 0 auto;
+            max-width: 90%;
+            box-sizing: border-box;
+        }
+
+        .reveal h1, .reveal h2, .reveal h3 {
+            color: var(--accent-warm);
+            font-weight: 700;
+            text-transform: none;
+            margin-bottom: 0.5em;
+            line-height: 1.2;
+        }
+
+        .reveal h2 {
+            font-size: 1.3em;
+        }
+
+        .reveal p {
+            line-height: 1.5;
+            color: var(--text-main);
+            margin-bottom: 0.8em;
+            font-size: 0.9em;
+        }
+
+        .reveal blockquote {
+            background: var(--accent-soft);
+            border-left: 4px solid var(--accent-warm);
+            padding: 12px 15px;
+            border-radius: 8px;
+            font-style: italic;
+            font-size: 0.85em;
+            width: 100%;
+            box-sizing: border-box;
+            margin: 15px 0;
+            color: #5C4A49;
+            box-shadow: none;
+        }
+
+        .highlight-box {
+            background: #FDF0ED;
+            border: 1px dashed var(--accent-warm);
+            padding: 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            margin-top: 10px;
+        }
+
+        /* Efecto de Desenfoque personalizado para transiciones adicionales */
+        .reveal.blur-effect .slides section {
+            filter: blur(10px);
+            transition: filter 0.6s ease-in-out;
+        }
+        .reveal.blur-effect .slides section.present {
+            filter: blur(0px);
+        }
+
+        /* Ajustes específicos para pantallas pequeñas */
+        @media (max-width: 600px) {
+            .reveal {
+                font-size: 20px;
+            }
+            .slide-card {
+                padding: 18px 15px;
+                max-width: 95%;
+            }
+        }
+
+          /* Logo de fondo permanente no invasivo y sutil */
+        #subtle-footer-logo {
+            position: fixed;
+            bottom: 15px;
+            left: 20px;
+            z-index: 99;
+            opacity: 0.5;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+        }
+        
+        #subtle-footer-logo img {
+            width: 38px;
+            height: auto;
+            filter: drop-shadow(0 0 2px rgba(255,255,255,0.2));
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo sutil en el pie de página -->
+    <div id="subtle-footer-logo">
+        <img src="BIBLIA-CONTEXTO-avatar.png" alt="Logo BIBLIA-CONTEXTO">
+    </div>
+
+    <div class="reveal blur-effect">
+        <div class="slides">
+
+            <!-- Diapositiva 1: Portada -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h1>Los Dos Ladrones</h1>
+                    <p style="font-size:1.1em; font-weight:600; color:var(--accent-warm);">Reflexión sobre el sufrimiento y el corazón humano</p>
+                    <p style="font-size:0.8em; color:#8C7B7A; margin-top:20px;">Basado en las Escrituras</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 2: El Mito del "Ladrón Bueno" -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>¿Existe un "Ladrón Bueno"?</h2>
+                    <p>Comúnmente se habla de esta historia como la del <i>"ladrón bueno"</i> y el <i>"ladrón malo"</i>.</p>
+                    <blockquote>
+                        "La Biblia nunca identifica a alguien que actúa como ladrón, como alguien bueno."
+                    </blockquote>
+                    <p>Decir que hay un ladrón bueno es contradictorio. Quien roba, es pecador.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 3: El Lenguaje del Enemigo -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>Infiltración sutil del pecado</h2>
+                    <p>El enemigo es experto en cambiar la forma de hablar para infiltrar el pecado en el pueblo de Dios.</p>
+                    <div class="highlight-box">
+                        <b>Mateo 12:34</b><br>
+                        Yeshúa advierte que un hombre malo no puede hablar algo bueno.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 4: Revelación del Corazón -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>El dolor revela el corazón</h2>
+                    <p>La escena en la cruz muestra cómo el sufrimiento extremo pone de manifiesto lo que habita en el interior.</p>
+                    <p>Se presentan <b>dos formas opuestas</b> de reaccionar ante la calamidad y el agobio.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 5: La Reacción del Ladrón Impenitente -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>El primer ladrón: Injuria y tentación</h2>
+                    <p>A punto de morir, aumentó su condena cometiendo otro pecado.</p>
+                    <blockquote>
+                        "Si eres el Cristo, sálvate a ti mismo y a nosotros."
+                    </blockquote>
+                    <p>Tentó al Maestro exigiendo una salvación egoísta.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 6: El Peligro del Egoísmo -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>Egoísmo en la vulnerabilidad</h2>
+                    <p>Su única preocupación era la liberación física, su sanidad y bienestar temporal.</p>
+                    <div class="highlight-box">
+                        ¿Reaccionamos con egoísmo ante las pruebas, sin importar lo que Dios tenga que decir?
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 7: La Reacción del Ladrón Arrepentido -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>Reconocimiento del pecado</h2>
+                    <p>El otro ladrón no estuvo enfocado en exigir liberación física.</p>
+                    <blockquote>
+                        "Nosotros justamente padecemos..."
+                    </blockquote>
+                    <p>Reconoció abiertamente su culpa y que su castigo era totalmente merecido.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 8: La Condena de Justificar al Impío -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>La justicia ante Dios</h2>
+                    <p>Dios no considera agradable mantener una actitud de falsa justicia por pura compasión al dolor.</p>
+                    <div class="highlight-box">
+                        <b>Proverbios 17:15</b><br>
+                        El que justifica al impío y el que condena al justo, ambos son abominación a Jehová.
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 9: La Confesión Necesaria -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>Camino a la Misericordia</h2>
+                    <p>Fue necesaria una confesión sincera reconociendo que su estilo de vida lo llevó al fracaso y a la muerte.</p>
+                    <p>No se puede recibir misericordia con un corazón orgulloso que tienta a Dios.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 10: El Verdadero Propósito de Yeshúa -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>Salvación del Alma</h2>
+                    <p>La sanidad física de nada sirve si el estilo de vida no cambia.</p>
+                    <blockquote>
+                        "Estarás conmigo en el paraíso."
+                    </blockquote>
+                    <p>El principal objetivo por el cual Yeshúa murió es librar el alma del infierno y otorgar el Reino de Dios.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 11: LLamado a la Reflexión -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>Tu respuesta ante la tribulación</h2>
+                    <p>La próxima vez que estés en angustia, reconoce la condición de tu vida y clama en <b>arrepentimiento</b>.</p>
+                    <div class="highlight-box">
+                        Alcanzar el Reino de Dios trasciende cualquier liberación terrenal.
+                    </div>
+                    <h3 style="margin-top:20px; color:var(--accent-warm);">Shalom</h3>
+                </div>
+                <p style="text-align: center; margin-top: 18px; font-size: 0.9em;">
+                        <a href="diapositivas.html" style="color: var(--gold-light);">
+                            Diapositiva anterior: Los dos ladrones
+                        </a>
+                </p>
+            </section>
+
+        </div>
+    </div>
+
+    <!-- Reveal.js CDN JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script>
+        Reveal.initialize({
+            width: 375,
+            height: 667,
+            margin: 0.05,
+            minScale: 0.8,
+            maxScale: 1.5,
+            history: true,
+            controls: true,
+            progress: true,
+            center: true,
+            transition: 'fade', // Transición suave combinada con el desenfoque
+            backgroundTransition: 'fade'
+        });
+    </script>
+</body>
+</html>

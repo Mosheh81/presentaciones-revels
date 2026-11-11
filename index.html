@@ -9,7 +9,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
 
-    <title>Los dos ladrones - Presentación Móvil</title>
+    <title>El Espíritu de Elías - Presentación Móvil</title>
 
     <!-- Reveal.js CDN CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
@@ -18,101 +18,123 @@
     <!-- Estilos personalizados: Paleta de tonos cálidos y pasteles + Desenfoque CSS -->
     <style>
         :root {
-            --bg-color: #FAF4EE;           /* Crema pastel cálido */
-            --card-bg: #FFFDF9;            /* Blanco cálido para tarjetas */
-            --text-main: #4A3E3D;          /* Marrón oscuro suave */
-            --accent-warm: #E07A5F;        /* Terracota pastel / Coral cálido */
-            --accent-soft: #F4F1DE;        /* Hueso claro */
-            --border-accent: #E8D5C4;      /* Borde suave melocotón */
+            --bg-color: #FDFBF7;
+            --text-color: #2D3748;
+            --accent-sage: #8A9A86;
+            --accent-terracotta: #D98A6C;
+            --accent-sand: #E2D4C9;
+            --card-bg: rgba(255, 255, 255, 0.75);
+            --card-border: #E0D7CD;
         }
 
         body {
             background-color: var(--bg-color);
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            color: var(--text-main);
         }
 
         .reveal {
-            font-size: 24px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-color);
         }
 
-        .reveal .slides {
-            text-align: center;
-        }
-
-        /* Estructura optimizada para vista vertical/móvil */
-        .slide-card {
-            background: var(--card-bg);
-            border: 2px solid var(--border-accent);
-            border-radius: 20px;
-            padding: 25px 20px;
-            box-shadow: 0 10px 25px rgba(180, 140, 120, 0.12);
-            margin: 0 auto;
-            max-width: 90%;
-            box-sizing: border-box;
-        }
-
-        .reveal h1, .reveal h2, .reveal h3 {
-            color: var(--accent-warm);
-            font-weight: 700;
+        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
+            font-family: 'Marcellus', serif;
+            color: #1A202C;
             text-transform: none;
-            margin-bottom: 0.5em;
-            line-height: 1.2;
+            letter-spacing: 0.02em;
         }
 
-        .reveal h2 {
-            font-size: 1.3em;
+        .reveal h1 { font-size: 2.2em; color: var(--accent-terracotta); }
+        .reveal h2 { font-size: 1.6em; color: var(--accent-sage); border-bottom: 2px solid var(--accent-sand); padding-bottom: 10px; }
+
+        /* Tarjetas con Paleta Pastel */
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            padding: 25px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            /*backdrop-filter: blur(1px);*/
+            margin-top: 15px;
         }
 
-        .reveal p {
-            line-height: 1.5;
-            color: var(--text-main);
-            margin-bottom: 0.8em;
-            font-size: 0.9em;
-        }
-
-        .reveal blockquote {
-            background: var(--accent-soft);
-            border-left: 4px solid var(--accent-warm);
-            padding: 12px 15px;
+        .quote-box {
+            background-color: #F4EFEA;
+            border-left: 5px solid var(--accent-terracotta);
+            padding: 20px;
             border-radius: 8px;
             font-style: italic;
-            font-size: 0.85em;
-            width: 100%;
-            box-sizing: border-box;
+            text-align: left;
             margin: 15px 0;
-            color: #5C4A49;
-            box-shadow: none;
+            font-size: 0.9em;
+            line-height: 1.5;
         }
 
-        .highlight-box {
-            background: #FDF0ED;
-            border: 1px dashed var(--accent-warm);
-            padding: 12px;
+        .hebrew-text {
+            font-family: 'Marcellus', serif;
+            color: var(--accent-terracotta);
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        /* Gradación Visual */
+        .progression-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        .progression-step {
+            background: #EBF1EA;
+            border: 1px solid #C8D6C5;
             border-radius: 12px;
+            padding: 15px 20px;
+            width: 20%;
+            text-align: center;
+            font-weight: 600;
+        }
+
+        .arrow {
+            font-size: 1.5em;
+            color: var(--accent-terracotta);
+        }
+
+        /* Responsive Columns */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+        }
+
+        .grid-3col {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            text-align: left;
             font-size: 0.85em;
+        }
+
+        ul {
+            line-height: 1.6;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .highlight {
+            color: var(--accent-terracotta);
+            font-weight: 600;
+        }
+
+        /* Footer / Subtítulo */
+        .subtitle {
+            font-size: 0.6em;
+            opacity: 0.7;
             margin-top: 10px;
         }
 
-        /* Efecto de Desenfoque personalizado para transiciones adicionales */
-        .reveal.blur-effect .slides section {
-            filter: blur(10px);
-            transition: filter 0.6s ease-in-out;
-        }
-        .reveal.blur-effect .slides section.present {
-            filter: blur(0px);
-        }
-
-        /* Ajustes específicos para pantallas pequeñas */
-        @media (max-width: 600px) {
-            .reveal {
-                font-size: 20px;
-            }
-            .slide-card {
-                padding: 18px 15px;
-                max-width: 95%;
-            }
-        }
 
           /* Logo de fondo permanente no invasivo y sutil */
         #subtle-footer-logo {
@@ -139,139 +161,149 @@
         <img src="BIBLIA-CONTEXTO-avatar.png" alt="Logo BIBLIA-CONTEXTO">
     </div>
 
-    <div class="reveal blur-effect">
+   <div class="reveal">
         <div class="slides">
 
             <!-- Diapositiva 1: Portada -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h1>Los Dos Ladrones</h1>
-                    <p style="font-size:1.1em; font-weight:600; color:var(--accent-warm);">Reflexión sobre el sufrimiento y el corazón humano</p>
-                    <p style="font-size:0.8em; color:#8C7B7A; margin-top:20px;">Basado en las Escrituras</p>
+            <section>
+                <h1>La Voz de Elías</h1>
+                <div class="card">
+                    <p class="hebrew-text">«Voz que clama en el desierto: Preparad camino a Jehová»</p>
+                    <p style="font-size: 0.85em; margin-top: 10px;">Isaías 40:3</p>
+                    <div class="subtitle">Estudio profético sobre la manifestación del espíritu de Elías en los tiempos finales</div>
                 </div>
             </section>
 
-            <!-- Diapositiva 2: El Mito del "Ladrón Bueno" -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h2>¿Existe un "Ladrón Bueno"?</h2>
-                    <p>Comúnmente se habla de esta historia como la del <i>"ladrón bueno"</i> y el <i>"ladrón malo"</i>.</p>
-                    <blockquote>
-                        "La Biblia nunca identifica a alguien que actúa como ladrón, como alguien bueno."
-                    </blockquote>
-                    <p>Decir que hay un ladrón bueno es contradictorio. Quien roba, es pecador.</p>
+            <!-- Diapositiva 2: ¿Quién es esta voz? -->
+            <section>
+                <h2>¿Quién es esta voz?</h2>
+                <div class="card">
+                    <div class="quote-box">
+                        «Pues éste es aquel de quien habló el profeta Isaías, cuando dijo: Voz del que clama en el desierto: Preparad el camino del Señor...» — Mateo 3:3
+                    </div>
+                    <ul>
+                        <li><span class="highlight">Identificación:</span> Mateo identifica directamente esta profecía con Juan el Bautista.</li>
+                        <li><span class="highlight">Estilo de vida:</span> Vestido de pelo de camello, cinto de cuero, alimentándose de langostas y miel silvestre (Mateo 3:4).</li>
+                    </ul>
                 </div>
             </section>
 
-            <!-- Diapositiva 3: El Lenguaje del Enemigo -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h2>Infiltración sutil del pecado</h2>
-                    <p>El enemigo es experto en cambiar la forma de hablar para infiltrar el pecado en el pueblo de Dios.</p>
-                    <div class="highlight-box">
-                        <b>Mateo 12:34</b><br>
-                        Yeshúa advierte que un hombre malo no puede hablar algo bueno.
+            <!-- Diapositiva 3: La Relación con Elías -->
+            <section>
+                <h2>La Conexión Profética</h2>
+                <div class="card">
+                    <p>Yeshúa vincula al Bautista con la figura histórica de Elías y anuncia un cumplimiento futuro:</p>
+                    <div class="quote-box">
+                        «A la verdad, Elías viene primero, y restaurará todas las cosas. Mas os digo que Elías ya vino, y no le conocieron...» — Mateo 17:11-12
+                    </div>
+                    <p style="font-size: 0.85em;">Yeshúa nos muestra que el espíritu de Elías se manifestará nuevamente justo antes de su segunda venida.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 4: Característica 1 - Aparición Repentina -->
+            <section>
+                <h2>1. Aparición Repentina</h2>
+                <div class="card">
+                    <div class="grid-2col">
+                        <div style="background: rgba(255,255,255,0.6); padding: 15px; border-radius: 8px;">
+                            <strong>Elías:</strong><br>Apareció de repente en 1 Reyes 17:1, obedeciendo una palabra dada por Dios sin avisos previos.
+                        </div>
+                        <div style="background: rgba(255,255,255,0.6); padding: 15px; border-radius: 8px;">
+                            <strong>Juan el Bautista:</strong><br>Surgió de la misma manera inesperada predicando en el desierto de Judea (Mateo 3:1).
+                        </div>
+                    </div>
+                    <p style="font-size: 0.85em; margin-top: 15px; text-align: center;">El espíritu de Elías en este tiempo final irrumpirá de forma repentina.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 5: Característica 2 - Celo por Dios y Teshuvá -->
+            <section>
+                <h2>2. Celo por los Mandamientos</h2>
+                <div class="card">
+                    <ul>
+                        <li><span class="highlight">El celo de Elías:</span> Enfrentó al pueblo y a Acab por abandonar el pacto y los mandamientos de Dios (1 Reyes 18:18; 19:10).</li>
+                        <li><span class="highlight">El llamado de Juan:</span> Predicaba <span class="hebrew-text">«Teshuvá»</span> (arrepentíos), llamando a volverse a los mandamientos de Dios (Mateo 3:2).</li>
+                        <li><span class="highlight">El mensaje actual:</span> El espíritu en el tiempo final llama a retornar al pacto y a los mandamientos divinos.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Diapositiva 6: Característica 3 - Enfrentar al Poder -->
+            <section>
+                <h2>3. Confrontación con la Autoridad</h2>
+                <div class="card">
+                    <div class="quote-box">
+                        «Porque Herodes había prendido a Juan... por causa de Herodías, mujer de Felipe su hermano» — Mateo 14:3
+                    </div>
+                    <ul>
+                        <li>Elías enfrentó a los profetas de Baal en el monte Carmelo (1 Reyes 18:20).</li>
+                        <li>Juan enfrentó públicamente el pecado de Herodes, lo que le costó la vida.</li>
+                        <li>El espíritu de Elías lleva a confrontar a quienes se niegan a hacer la voluntad de Dios.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Diapositiva 7: La Voz en la Actualidad -->
+            <section>
+                <h2>El Mensaje en la Actualidad</h2>
+                <div class="card">
+                    <p>En estos últimos meses, un solo mensaje resuena con fuerza entre el pueblo de Dios:</p>
+                    <div class="quote-box" style="text-align: center;">
+                        «¡Arrepentíos y vuélvanse a sus mandamientos!»
+                    </div>
+                    <p style="font-size: 0.85em;">Este llamado surge de repente en boca de cristianos que no temen señalar el pecado ni justificar al malvado, conforme a la instrucción de Proverbios.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 8: El Rechazo Profético -->
+            <section>
+                <h2>El Patrón del Rechazo</h2>
+                <div class="card">
+                    <p>Así como ocurrió en el pasado, la historia tiende a repetirse:</p>
+                    <ul>
+                        <li>El pueblo y los líderes <span class="highlight">no conocieron</span> a Juan el Bautista ni reconocieron la obra de Elías.</li>
+                        <li>Yeshúa advierte que de la misma manera la iglesia e instituciones pueden no reconocer la visitación de su Espíritu hoy.</li>
+                        <li>La fidelidad a este mensaje puede implicar grandes costos personales.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Diapositiva 9: Tiempo de los Eventos del Fin -->
+            <section>
+                <h2>Señales de los Tiempos</h2>
+                <div class="card">
+                    <p>Si esta manifestación corresponde al espíritu de Elías operando en la Iglesia hoy, esto implica que:</p>
+                    <div class="grid-2col" style="margin-top: 15px;">
+                        <div style="background: rgba(255,255,255,0.6); padding: 15px; border-radius: 8px;">
+                            <strong>1. Cercanía:</strong><br>La segunda venida de Yeshúa está cerca.
+                        </div>
+                        <div style="background: rgba(255,255,255,0.6); padding: 15px; border-radius: 8px;">
+                            <strong>2. Los Sellos:</strong><br>El tiempo de los eventos del fin ya está en marcha; el primer sello de Apocalipsis ha sido abierto.
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Diapositiva 4: Revelación del Corazón -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h2>El dolor revela el corazón</h2>
-                    <p>La escena en la cruz muestra cómo el sufrimiento extremo pone de manifiesto lo que habita en el interior.</p>
-                    <p>Se presentan <b>dos formas opuestas</b> de reaccionar ante la calamidad y el agobio.</p>
-                </div>
-            </section>
-
-            <!-- Diapositiva 5: La Reacción del Ladrón Impenitente -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h2>El primer ladrón: Injuria y tentación</h2>
-                    <p>A punto de morir, aumentó su condena cometiendo otro pecado.</p>
-                    <blockquote>
-                        "Si eres el Cristo, sálvate a ti mismo y a nosotros."
-                    </blockquote>
-                    <p>Tentó al Maestro exigiendo una salvación egoísta.</p>
-                </div>
-            </section>
-
-            <!-- Diapositiva 6: El Peligro del Egoísmo -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h2>Egoísmo en la vulnerabilidad</h2>
-                    <p>Su única preocupación era la liberación física, su sanidad y bienestar temporal.</p>
-                    <div class="highlight-box">
-                        ¿Reaccionamos con egoísmo ante las pruebas, sin importar lo que Dios tenga que decir?
+            <!-- Diapositiva 10: Conclusión y Preparación -->
+            <section>
+                <h2>Conclusión</h2>
+                <div class="card">
+                    <div class="quote-box" style="text-align: center;">
+                        «La gracia de nuestro Señor Yeshúa sea con todos.»
                     </div>
-                </div>
-            </section>
-
-            <!-- Diapositiva 7: La Reacción del Ladrón Arrepentido -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h2>Reconocimiento del pecado</h2>
-                    <p>El otro ladrón no estuvo enfocado en exigir liberación física.</p>
-                    <blockquote>
-                        "Nosotros justamente padecemos..."
-                    </blockquote>
-                    <p>Reconoció abiertamente su culpa y que su castigo era totalmente merecido.</p>
-                </div>
-            </section>
-
-            <!-- Diapositiva 8: La Condena de Justificar al Impío -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h2>La justicia ante Dios</h2>
-                    <p>Dios no considera agradable mantener una actitud de falsa justicia por pura compasión al dolor.</p>
-                    <div class="highlight-box">
-                        <b>Proverbios 17:15</b><br>
-                        El que justifica al impío y el que condena al justo, ambos son abominación a Jehová.
-                    </div>
-                </div>
-            </section>
-
-            <!-- Diapositiva 9: La Confesión Necesaria -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h2>Camino a la Misericordia</h2>
-                    <p>Fue necesaria una confesión sincera reconociendo que su estilo de vida lo llevó al fracaso y a la muerte.</p>
-                    <p>No se puede recibir misericordia con un corazón orgulloso que tienta a Dios.</p>
-                </div>
-            </section>
-
-            <!-- Diapositiva 10: El Verdadero Propósito de Yeshúa -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h2>Salvación del Alma</h2>
-                    <p>La sanidad física de nada sirve si el estilo de vida no cambia.</p>
-                    <blockquote>
-                        "Estarás conmigo en el paraíso."
-                    </blockquote>
-                    <p>El principal objetivo por el cual Yeshúa murió es librar el alma del infierno y otorgar el Reino de Dios.</p>
-                </div>
-            </section>
-
-            <!-- Diapositiva 11: LLamado a la Reflexión -->
-            <section data-transition="blur">
-                <div class="slide-card">
-                    <h2>Tu respuesta ante la tribulación</h2>
-                    <p>La próxima vez que estés en angustia, reconoce la condición de tu vida y clama en <b>arrepentimiento</b>.</p>
-                    <div class="highlight-box">
-                        Alcanzar el Reino de Dios trasciende cualquier liberación terrenal.
-                    </div>
-                    <h3 style="margin-top:20px; color:var(--accent-warm);">Shalom</h3>
-                </div>
-                <p style="text-align: center; margin-top: 18px; font-size: 0.9em;">
-                        <a href="esforzaos.html" style="color: var(--gold-light);">
-                            Presentación anterior: esforzaos.html
-                        </a>
+                    <p style="font-size: 0.85em; text-align: center; margin-top: 15px;">
+                        Reconocer la voz de Elías en el presente nos convoca a un arrepentimiento genuino, a la práctica de la Teshuvá y a la firme preparación espiritual ante el advenimiento de los tiempos finales.
                     </p>
+                </div>
+                 <p style="text-align: center; margin-top: 18px; font-size: 0.9em;">
+                        <a href="diapositivas.html" style="color: var(--gold-light);">
+                            Diapositiva anterior: Los dos ladrones
+                        </a>
+                </p>
             </section>
 
         </div>
     </div>
-
     <!-- Reveal.js CDN JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
     <script>
