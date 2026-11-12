@@ -1,82 +1,104 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Un fuego peligroso y sagrado</title>
 
-    <!-- Prevenir almacenamiento en caché (Cache-Control Tags) -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-
-    <title>El Espíritu de Elías - Presentación Móvil</title>
-
-    <!-- Reveal.js CDN CSS -->
+    <!-- Reveal.js CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reset.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
-    
-    <!-- Estilos personalizados: Paleta de tonos cálidos y pasteles + Desenfoque CSS -->
     <style>
         :root {
-            --bg-color: #FDFBF7;
-            --text-color: #2D3748;
-            --accent-sage: #8A9A86;
-            --accent-terracotta: #D98A6C;
-            --accent-sand: #E2D4C9;
-            --card-bg: rgba(255, 255, 255, 0.75);
-            --card-border: #E0D7CD;
+            --bg-color: #FAF4EE;
+            --card-bg: #FFFDF9;
+            --text-main: #4A3E3D;
+            --accent-warm: #E07A5F;
+            --accent-soft: #F4F1DE;
+            --border-accent: #E8D5C4;
         }
 
         body {
             background-color: var(--bg-color);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            color: var(--text-main);
         }
 
         .reveal {
-            font-family: 'Plus Jakarta Sans', sans-serif;
-            color: var(--text-color);
+            font-size: 24px;
         }
 
-        .reveal h1, .reveal h2, .reveal h3, .reveal h4 {
-            font-family: 'Marcellus', serif;
-            color: #1A202C;
-            text-transform: none;
-            letter-spacing: 0.02em;
+        .reveal .slides {
+            text-align: center;
         }
 
-        .reveal h1 { font-size: 2.2em; color: var(--accent-terracotta); }
-        .reveal h2 { font-size: 1.6em; color: var(--accent-sage); border-bottom: 2px solid var(--accent-sand); padding-bottom: 10px; }
-
-        /* Tarjetas con Paleta Pastel */
-        .card {
+        .slide-card {
             background: var(--card-bg);
-            border: 1px solid var(--card-border);
-            border-radius: 16px;
-            padding: 25px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
-            /*backdrop-filter: blur(1px);*/
-            margin-top: 15px;
+            border: 2px solid var(--border-accent);
+            border-radius: 20px;
+            padding: 25px 20px;
+            box-shadow: 0 10px 25px rgba(180, 140, 120, 0.12);
+            margin: 0 auto;
+            max-width: 90%;
+            box-sizing: border-box;
+        }
+
+        .reveal h1, .reveal h2, .reveal h3 {
+            color: var(--accent-warm);
+            font-weight: 700;
+            text-transform: none;
+            margin-bottom: 0.5em;
+            line-height: 1.2;
+        }
+
+        .reveal h2 {
+            font-size: 1.3em;
+        }
+
+        .reveal p {
+            line-height: 1.5;
+            color: var(--text-main);
+            margin-bottom: 0.8em;
+            font-size: 0.9em;
+        }
+
+        .reveal p.subtitle {
+            font-size: 0.8em;
+            color: #8C7B7A;
+            margin-top: 20px;
         }
 
         .quote-box {
-            background-color: #F4EFEA;
-            border-left: 5px solid var(--accent-terracotta);
-            padding: 20px;
+            background: var(--accent-soft);
+            border-left: 4px solid var(--accent-warm);
+            padding: 12px 15px;
             border-radius: 8px;
             font-style: italic;
             text-align: left;
+            font-size: 0.85em;
+            width: 100%;
+            box-sizing: border-box;
             margin: 15px 0;
-            font-size: 0.9em;
-            line-height: 1.5;
+            color: #5C4A49;
+            box-shadow: none;
+        }
+
+        .highlight, .hebrew-text {
+            color: var(--accent-warm);
+            font-weight: 700;
         }
 
         .hebrew-text {
-            font-family: 'Marcellus', serif;
-            color: var(--accent-terracotta);
-            font-weight: bold;
-            font-size: 1.1em;
+            font-style: italic;
         }
 
-        /* Gradación Visual */
+        .grid-2col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            text-align: left;
+        }
+
         .progression-container {
             display: flex;
             justify-content: space-around;
@@ -85,8 +107,8 @@
         }
 
         .progression-step {
-            background: #EBF1EA;
-            border: 1px solid #C8D6C5;
+            background: var(--accent-soft);
+            border: 1px solid var(--border-accent);
             border-radius: 12px;
             padding: 15px 20px;
             width: 20%;
@@ -96,23 +118,7 @@
 
         .arrow {
             font-size: 1.5em;
-            color: var(--accent-terracotta);
-        }
-
-        /* Responsive Columns */
-        .grid-2col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            text-align: left;
-        }
-
-        .grid-3col {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 15px;
-            text-align: left;
-            font-size: 0.85em;
+            color: var(--accent-warm);
         }
 
         ul {
@@ -123,20 +129,26 @@
             margin-bottom: 10px;
         }
 
-        .highlight {
-            color: var(--accent-terracotta);
-            font-weight: 600;
+        .reveal.blur-effect .slides section {
+            filter: blur(10px);
+            transition: filter 0.6s ease-in-out;
         }
 
-        /* Footer / Subtítulo */
-        .subtitle {
-            font-size: 0.6em;
-            opacity: 0.7;
-            margin-top: 10px;
+        .reveal.blur-effect .slides section.present {
+            filter: blur(0);
         }
 
+        @media (max-width: 600px) {
+            .reveal {
+                font-size: 20px;
+            }
 
-          /* Logo de fondo permanente no invasivo y sutil */
+            .slide-card {
+                padding: 18px 15px;
+                max-width: 95%;
+            }
+        }
+
         #subtle-footer-logo {
             position: fixed;
             bottom: 15px;
@@ -146,7 +158,7 @@
             transition: opacity 0.3s ease;
             pointer-events: none;
         }
-        
+
         #subtle-footer-logo img {
             width: 38px;
             height: auto;
@@ -156,155 +168,179 @@
 </head>
 <body>
 
-    <!-- Logo sutil en el pie de página -->
     <div id="subtle-footer-logo">
         <img src="BIBLIA-CONTEXTO-avatar.png" alt="Logo BIBLIA-CONTEXTO">
     </div>
 
-   <div class="reveal">
+    <div class="reveal blur-effect">
         <div class="slides">
 
             <!-- Diapositiva 1: Portada -->
-            <section>
-                <h1>La Voz de Elías</h1>
-                <div class="card">
-                    <p class="hebrew-text">«Voz que clama en el desierto: Preparad camino a Jehová»</p>
-                    <p style="font-size: 0.85em; margin-top: 10px;">Isaías 40:3</p>
-                    <div class="subtitle">Estudio profético sobre la manifestación del espíritu de Elías en los tiempos finales</div>
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h1>Un Fuego Peligroso y Sagrado</h1>
+                    <p class="hebrew-text">«Af» (אַף - H639): El dominio del espíritu en el camino de los reyes</p>
+                    <p style="font-size: 0.85em; margin-top: 10px;">Una reflexión sobre la ira, la paciencia y el dominio propio según Proverbios y el ejemplo de Yeshúa.</p>
+                    <p class="subtitle">Llamados a reinar con sabiduría y mansedumbre</p>
                 </div>
             </section>
 
-            <!-- Diapositiva 2: ¿Quién es esta voz? -->
-            <section>
-                <h2>¿Quién es esta voz?</h2>
-                <div class="card">
-                    <div class="quote-box">
-                        «Pues éste es aquel de quien habló el profeta Isaías, cuando dijo: Voz del que clama en el desierto: Preparad el camino del Señor...» — Mateo 3:3
-                    </div>
-                    <ul>
-                        <li><span class="highlight">Identificación:</span> Mateo identifica directamente esta profecía con Juan el Bautista.</li>
-                        <li><span class="highlight">Estilo de vida:</span> Vestido de pelo de camello, cinto de cuero, alimentándose de langostas y miel silvestre (Mateo 3:4).</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Diapositiva 3: La Relación con Elías -->
-            <section>
-                <h2>La Conexión Profética</h2>
-                <div class="card">
-                    <p>Yeshúa vincula al Bautista con la figura histórica de Elías y anuncia un cumplimiento futuro:</p>
-                    <div class="quote-box">
-                        «A la verdad, Elías viene primero, y restaurará todas las cosas. Mas os digo que Elías ya vino, y no le conocieron...» — Mateo 17:11-12
-                    </div>
-                    <p style="font-size: 0.85em;">Yeshúa nos muestra que el espíritu de Elías se manifestará nuevamente justo antes de su segunda venida.</p>
-                </div>
-            </section>
-
-            <!-- Diapositiva 4: Característica 1 - Aparición Repentina -->
-            <section>
-                <h2>1. Aparición Repentina</h2>
-                <div class="card">
-                    <div class="grid-2col">
-                        <div style="background: rgba(255,255,255,0.6); padding: 15px; border-radius: 8px;">
-                            <strong>Elías:</strong><br>Apareció de repente en 1 Reyes 17:1, obedeciendo una palabra dada por Dios sin avisos previos.
-                        </div>
-                        <div style="background: rgba(255,255,255,0.6); padding: 15px; border-radius: 8px;">
-                            <strong>Juan el Bautista:</strong><br>Surgió de la misma manera inesperada predicando en el desierto de Judea (Mateo 3:1).
-                        </div>
-                    </div>
-                    <p style="font-size: 0.85em; margin-top: 15px; text-align: center;">El espíritu de Elías en este tiempo final irrumpirá de forma repentina.</p>
-                </div>
-            </section>
-
-            <!-- Diapositiva 5: Característica 2 - Celo por Dios y Teshuvá -->
-            <section>
-                <h2>2. Celo por los Mandamientos</h2>
-                <div class="card">
-                    <ul>
-                        <li><span class="highlight">El celo de Elías:</span> Enfrentó al pueblo y a Acab por abandonar el pacto y los mandamientos de Dios (1 Reyes 18:18; 19:10).</li>
-                        <li><span class="highlight">El llamado de Juan:</span> Predicaba <span class="hebrew-text">«Teshuvá»</span> (arrepentíos), llamando a volverse a los mandamientos de Dios (Mateo 3:2).</li>
-                        <li><span class="highlight">El mensaje actual:</span> El espíritu en el tiempo final llama a retornar al pacto y a los mandamientos divinos.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Diapositiva 6: Característica 3 - Enfrentar al Poder -->
-            <section>
-                <h2>3. Confrontación con la Autoridad</h2>
-                <div class="card">
-                    <div class="quote-box">
-                        «Porque Herodes había prendido a Juan... por causa de Herodías, mujer de Felipe su hermano» — Mateo 14:3
-                    </div>
-                    <ul>
-                        <li>Elías enfrentó a los profetas de Baal en el monte Carmelo (1 Reyes 18:20).</li>
-                        <li>Juan enfrentó públicamente el pecado de Herodes, lo que le costó la vida.</li>
-                        <li>El espíritu de Elías lleva a confrontar a quienes se niegan a hacer la voluntad de Dios.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Diapositiva 7: La Voz en la Actualidad -->
-            <section>
-                <h2>El Mensaje en la Actualidad</h2>
-                <div class="card">
-                    <p>En estos últimos meses, un solo mensaje resuena con fuerza entre el pueblo de Dios:</p>
-                    <div class="quote-box" style="text-align: center;">
-                        «¡Arrepentíos y vuélvanse a sus mandamientos!»
-                    </div>
-                    <p style="font-size: 0.85em;">Este llamado surge de repente en boca de cristianos que no temen señalar el pecado ni justificar al malvado, conforme a la instrucción de Proverbios.</p>
-                </div>
-            </section>
-
-            <!-- Diapositiva 8: El Rechazo Profético -->
-            <section>
-                <h2>El Patrón del Rechazo</h2>
-                <div class="card">
-                    <p>Así como ocurrió en el pasado, la historia tiende a repetirse:</p>
-                    <ul>
-                        <li>El pueblo y los líderes <span class="highlight">no conocieron</span> a Juan el Bautista ni reconocieron la obra de Elías.</li>
-                        <li>Yeshúa advierte que de la misma manera la iglesia e instituciones pueden no reconocer la visitación de su Espíritu hoy.</li>
-                        <li>La fidelidad a este mensaje puede implicar grandes costos personales.</li>
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Diapositiva 9: Tiempo de los Eventos del Fin -->
-            <section>
-                <h2>Señales de los Tiempos</h2>
-                <div class="card">
-                    <p>Si esta manifestación corresponde al espíritu de Elías operando en la Iglesia hoy, esto implica que:</p>
+            <!-- Diapositiva 2: La Naturaleza del Fuego Interior -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>La Fuerza Interior (Af - H639)</h2>
+                    <p>En hebreo, la palabra <span class="hebrew-text">Af (H639)</span> refiere a una pasión interior poderosa, comparable a una bestia salvaje o al vapor hirviendo en una caldera.</p>
                     <div class="grid-2col" style="margin-top: 15px;">
-                        <div style="background: rgba(255,255,255,0.6); padding: 15px; border-radius: 8px;">
-                            <strong>1. Cercanía:</strong><br>La segunda venida de Yeshúa está cerca.
+                        <div style="background: var(--card-bg); padding: 15px; border-radius: 8px;">
+                            <strong>Su chispa inicial:</strong><br>No es pecado en sí misma; fue diseñada para durar solo un momento (Salmos 30:5).
                         </div>
-                        <div style="background: rgba(255,255,255,0.6); padding: 15px; border-radius: 8px;">
-                            <strong>2. Los Sellos:</strong><br>El tiempo de los eventos del fin ya está en marcha; el primer sello de Apocalipsis ha sido abierto.
+                        <div style="background: var(--card-bg); padding: 15px; border-radius: 8px;">
+                            <strong>Sin dominio propio:</strong><br>En manos de quien no gobierna su espíritu, se convierte en una fuerza destructiva.
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!-- Diapositiva 10: Conclusión y Preparación -->
-            <section>
-                <h2>Conclusión</h2>
-                <div class="card">
+            <!-- Diapositiva 3: 1. La Ira Apaga la Luz de la Inteligencia -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>1. La Ira Apaga la Inteligencia</h2>
+                    <ul>
+                        <li><span class="highlight">Juicio corrompido:</span> Cuando la sangre hierve, la mente se oscurece y se nubla el entendimiento (Proverbios 14:17).</li>
+                        <li><span class="highlight">Abdicación al trono:</span> Perder el control es ceder el trono de la mente que pertenece a Jehová y a su Espíritu.</li>
+                    </ul>
                     <div class="quote-box" style="text-align: center;">
-                        «La gracia de nuestro Señor Yeshúa sea con todos.»
+                        ¿Cuál es la consecuencia que obtendré al soltar mi ira? <br><span style="font-size: 0.8em; font-style: normal;">— La pregunta de un Rey antes de rendirse al impulso</span>
                     </div>
-                    <p style="font-size: 0.85em; text-align: center; margin-top: 15px;">
-                        Reconocer la voz de Elías en el presente nos convoca a un arrepentimiento genuino, a la práctica de la Teshuvá y a la firme preparación espiritual ante el advenimiento de los tiempos finales.
+                </div>
+            </section>
+
+            <!-- Diapositiva 4: 2. El Arte Sagrado de la Paciencia -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>2. El Arte Sagrado de la Paciencia</h2>
+                    <p>En hebreo, la paciencia es <span class="hebrew-text">Erech Apaim</span> («de nariz larga»): el aliento de la ira tarda mucho en recorrer y salir como fuego.</p>
+                    <div class="quote-box">
+                        «El que tarda en airarse es grande de entendimiento; más el que es impaciente de espíritu enaltece la necedad.» — Proverbios 14:29
+                    </div>
+                    <p style="font-size: 0.85em;">Apaciguar una rencilla con mansedumbre trae paz al hogar y representa una victoria superior a ganar una guerra con espada (Proverbios 15:18).</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 5: 3. La Respuesta Blanda -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>3. La Respuesta Blanda</h2>
+                    <div class="quote-box">
+                        «La blanda respuesta quita la ira; más la palabra áspera hace subir el furor.» — Proverbios 15:1
+                    </div>
+                    <ul>
+                        <li><span class="highlight">Escudo impenetrable:</span> Un rey prudente sabe que el silencio y la mesura extinguen el fuego ajeno.</li>
+                        <li><span class="highlight">Fortaleza de espíritu:</span> Mejor es el que se enseñorea de su espíritu que el que toma una ciudad (Proverbios 16:32).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Diapositiva 6: 4. La Medicina Secreta: La Pausa -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>4. La Medicina Secreta: La Pausa</h2>
+                    <p>Entre el estímulo y la reacción, Jehová estableció un espacio sagrado para la reflexión:</p>
+                    <div class="progression-container">
+                        <div class="progression-step">Estímulo<br><span style="font-size:0.75em; font-weight:normal;">(Ofensa / Provocación)</span></div>
+                        <div class="arrow">→</div>
+                        <div class="progression-step" style="background: var(--accent-soft); border-color: var(--accent-warm);">Pausa Sagrada<br><span style="font-size:0.75em; font-weight:normal;">(Erech Apaim)</span></div>
+                        <div class="arrow">→</div>
+                        <div class="progression-step">Respuesta Sabia<br><span style="font-size:0.75em; font-weight:normal;">(Dominio propio)</span></div>
+                    </div>
+                    <p style="font-size: 0.85em; margin-top: 20px; text-align: center;">La ira desatada nos hace esclavos de las circunstancias; la pausa nos corona dueños de nuestro destino.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 7: 5. El Peligro de Andar con los Violentos -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>5. El Peligro de las Malas Compañías</h2>
+                    <div class="quote-box">
+                        «No te entremetas con el iracundo, ni te acompañes con el hombre de enojos, no sea que aprendas sus maneras, y tomes lazo para tu alma.» — Proverbios 22:24-25
+                    </div>
+                    <ul>
+                        <li><span class="highlight">Influencia diaria:</span> Quien camina con el furioso termina imitando sus caminos y perdiendo su paz.</li>
+                        <li><span class="highlight">El entorno del Rey:</span> Aparta al impío de la presencia del rey, y su trono se afirmará en justicia (Proverbios 25:5).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Diapositiva 8: Yeshúa: El Maestro del Silencio -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>Yeshúa: Maestro de la Pausa</h2>
+                    <p>Frente a los tribunales falsos, las mentiras y los insultos, el mundo esperaba trueno y venganza, pero Yeshúa mostró la cumbre del dominio propio (<span class="hebrew-text">Gevurah</span>):</p>
+                    <div class="quote-box">
+                        «Fue llevado como cordero al matadero; y como una oveja delante de sus trasquiladores, enmudeció, y no abrió su boca.» — Isaías 53:7
+                    </div>
+                    <p style="font-size: 0.85em;">Conquistó el monte más difícil: someter todo su poder a la voluntad del Padre frente a la injusticia suprema.</p>
+                </div>
+            </section>
+
+            <!-- Diapositiva 9: La Ira Justa frente a la Hipocresía -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>El Fuego Bien Contenido de Yeshúa</h2>
+                    <p>El Maestro también sintió indignación (como al purificar el templo), pero su ira tenía una naturaleza distinta:</p>
+                    <div class="grid-2col" style="margin-top: 15px;">
+                        <div style="background: var(--card-bg); padding: 15px; border-radius: 8px;">
+                            <strong>Nunca egoísta:</strong><br>Jamás se airó por orgullo herido ni por caprichos personales.
+                        </div>
+                        <div style="background: var(--card-bg); padding: 15px; border-radius: 8px;">
+                            <strong>Fuego del santuario:</strong><br>Sagrado, medido y puesto al servicio de la verdad ante el ultraje al Padre y al desvalido.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Diapositiva 10: La Blanda Respuesta en la Cruz -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>La Victoria en el Madero</h2>
+                    <div class="quote-box" style="text-align: center;">
+                        «Padre, perdónalos, porque no saben lo que hacen.» — Lucas 23:34
+                    </div>
+                    <ul>
+                        <li>Ante el odio humano, Yeshúa respondió con el amor eterno del Cielo e intercesión.</li>
+                        <li>Con esa palabra cargada de mansedumbre desarmó el imperio de las tinieblas y venció a la muerte.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Diapositiva 11: Conclusión - La Ciudad con Murallas -->
+            <section data-transition="blur">
+                <div class="slide-card">
+                    <h2>La Armadura de la Paciencia</h2>
+                    <div class="grid-2col">
+                        <div style="background: var(--accent-soft); padding: 15px; border-radius: 8px;">
+                            <strong>Fuego contenido:</strong><br>Calienta el hogar y hornea el pan de la sabiduría.
+                        </div>
+                        <div style="background: var(--accent-soft); padding: 15px; border-radius: 8px;">
+                            <strong>Fuego sin control:</strong><br>Reduce la casa entera a cenizas.
+                        </div>
+                    </div>
+                    <p style="font-size: 0.85em; margin-top: 18px; text-align: center;">
+                        Quien no refrena su furia es como una <span class="highlight">ciudad sin murallas</span> expuesta al saqueo (Proverbios 25:28). Vestirnos de paciencia es la verdadera túnica de los reyes.
                     </p>
                 </div>
                  <p style="text-align: center; margin-top: 18px; font-size: 0.9em;">
-                        <a href="diapositivas.html" style="color: var(--gold-light);">
-                            Diapositiva anterior: Los dos ladrones
+                        <a href="diapositivas.html" style="color: var(--accent-warm);">
+                            Diapositiva anterior: El Espíritu de Elías
                         </a>
                 </p>
             </section>
 
         </div>
     </div>
-    <!-- Reveal.js CDN JS -->
+
+    <!-- Reveal.js JS CDN -->
+     <!-- Reveal.js CDN JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
     <script>
         Reveal.initialize({
